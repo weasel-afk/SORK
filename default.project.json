@@ -17,11 +17,25 @@
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
         "Client": {
+          "$className": "Folder",
           "$path": "src/client"
         }
       }
     },
+
+    "StarterGui": {
+      "$className": "StarterGui",
+        "MainGui": {
+      "$className": "ScreenGui",
+      "script": {
+        "$className": "Folder",
+          "$path": "src/client/gui"}
+        
+  }
+}
+,
 
     "Workspace": {
       "$properties": {
