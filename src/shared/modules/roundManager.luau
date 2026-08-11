@@ -5,7 +5,7 @@ local rs = game.ReplicatedStorage
 local re = rs.RE
 local RoundstartEvent = re.roundStart
 local roundEndEvent = re.roundEnd
-local charmanager = require(rs.module.CharacterManager)
+local charmanager = require(rs.Shared.modules.CharacterManager)
 local spawnpoint = game.Workspace:FindFirstChild("RoundSpawn")
 --0 = lobby, 1 = ingame, 2 = survivor can open door
 local function setPlayerUp(player)

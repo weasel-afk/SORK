@@ -2,7 +2,7 @@ game.Players.PlayerAdded:Connect(function(plr)
 plr.Team = game.Teams.lobby
 end)
 local dih = os.time() + 5
-local modulesRS = game.ReplicatedStorage.module
+local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE
 local timeupdate = re.timeupdate
@@ -30,4 +30,3 @@ end
 task.wait(5)
 roundManager.stopRound()
 print("round stop")]]
-
