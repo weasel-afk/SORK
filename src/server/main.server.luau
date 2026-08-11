@@ -1,7 +1,7 @@
 game.Players.PlayerAdded:Connect(function(plr)
 plr.Team = game.Teams.lobby
 end)
-local dih = os.time() + 5
+local dih = os.time() + 10
 local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE
@@ -18,10 +18,10 @@ while true do-- just like brod cast uh time till start / end yk
 	if dih <= os.time() then
 		if roundManager.Status == 0 then
 			roundManager.startRound()
-			dih = os.time() + 5
+			dih = os.time() + 10
 		elseif roundManager.Status ~= 0 then
 			roundManager.stopRound()
-			dih = os.time() + 5
+			dih = os.time() + 10
 		end
 	end
 end

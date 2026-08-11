@@ -1,7 +1,7 @@
 local re = game.ReplicatedStorage.RE
 local roundstart = re.roundStart
 local roundend = re.roundEnd
-local player = script.Parent.Parent
+local player = script.Parent.Parent.Parent
 
 print(player)
 local state = player.PlayerGui:WaitForChild("ScreenGui").Frame.state
