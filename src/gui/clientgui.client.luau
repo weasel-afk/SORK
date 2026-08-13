@@ -1,6 +1,7 @@
 --[[ This script will handle inputs from GUI, 
 and depending on what is selected will call a function to a modulescipt-
 that will be able to verify actions depending on the players stats, like cash or more.]]
+--|| a bunch of local stuff
 local parent = script.Parent.Parent
 local stateortime = parent.infoframe
 local charframe = parent.charFrame
@@ -12,6 +13,10 @@ local timeupdate = re.timeupdate
 local showframe = parent.showframe
 local button1 = showframe.button1
 local button2 = showframe.button2
+local select1 = charframe.Select1
+local select2 = charframe.Select2
+local charselect = re.CharSelect
+local charactermanagermodule = require(rs.Shared.modules.CharacterManager)
 
 local function changeVisability(towhat)
 	if towhat.Visible == true then
@@ -22,7 +27,10 @@ local function changeVisability(towhat)
 		towhat.Interactable = true
 	end
 end
-
+local function charselectmoment(char)
+	charselect:FireServer(charactermanagermodule.Typesofplayers["Surviver"], char)
+	print(charactermanagermodule.Typesofplayers["Surviver"])
+end
 button1.MouseButton1Click:Connect(function()
 	changeVisability(stateortime)
 end)
@@ -34,4 +42,8 @@ rstart.OnClientEvent:Connect(function(idk1bro1dont1ask1me)
 end)
 timeupdate.OnClientEvent:Connect(function(dih)
 	stateortime.time.Text = tostring(math.round(dih-os.time()))
+end)
+select1.MouseButton1Click:Connect(function()
+	charselectmoment(charactermanagermodule.Survivers.Char1)
+	print("yo")
 end)

@@ -1,15 +1,19 @@
 local characterManager = {}
 characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}}
+characterManager.Typesofplayers = {"Surviver", Killer = nil}
 characterManager.playerCharTable = {}
 local tools = game.ReplicatedStorage.tools:GetChildren()
 
-function characterManager.ChangeChar(type, selection, player)
-	if type == "Surviver" then
+function characterManager.ChangeChar(typee, selection, player)
+	if typee == "Surviver" then
 		local playerselection = characterManager.Survivers[selection]
 		print(playerselection)
 		print(player.Name)
 		characterManager.playerCharTable[player.Name] = playerselection
 		print(characterManager.playerCharTable, "table")
+	else
+		warn("failed!")
+		print(typee)
 	end-- add killer system
 end
 

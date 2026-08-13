@@ -6,9 +6,9 @@ local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE
 local timeupdate = re.timeupdate
-re.CharSelect.OnServerEvent:Connect(function(player, sork, char) 
+re.CharSelect.OnServerEvent:Connect(function(player, s1or1k, char) 
 	-->> Security : This, since it came from a client, can be changed by the client to be incorecct. Make a sanity check to confim they own it.
-	charactermanager.ChangeChar(sork, char, player)
+	charactermanager.ChangeChar(s1or1k, char, player)
 end)
 local roundManager = require(modulesRS.roundManager)
 
