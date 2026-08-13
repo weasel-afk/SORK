@@ -1,6 +1,7 @@
 game.Players.PlayerAdded:Connect(function(plr)
 plr.Team = game.Teams.lobby
 end)
+task.wait(3) -- just because ui shows like 3 seconds early, maybe bc of initialization?
 local dih = os.time() + 10
 local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)

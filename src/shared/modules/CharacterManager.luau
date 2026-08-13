@@ -1,11 +1,12 @@
 local characterManager = {}
 characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}}
-characterManager.Typesofplayers = {"Surviver", Killer = nil}
+characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
 characterManager.playerCharTable = {}
 local tools = game.ReplicatedStorage.tools:GetChildren()
 
 function characterManager.ChangeChar(typee, selection, player)
-	if typee == "Surviver" then
+	print(typee)
+	if typee then
 		local playerselection = characterManager.Survivers[selection]
 		print(playerselection)
 		print(player.Name)

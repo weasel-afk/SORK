@@ -27,8 +27,8 @@ local function changeVisability(towhat)
 		towhat.Interactable = true
 	end
 end
-local function charselectmoment(char)
-	charselect:FireServer(charactermanagermodule.Typesofplayers["Surviver"], char)
+local function charselectmoment(char, typeofplayer)
+	charselect:FireServer(typeofplayer, char)
 	print(charactermanagermodule.Typesofplayers["Surviver"])
 end
 button1.MouseButton1Click:Connect(function()
@@ -44,6 +44,13 @@ timeupdate.OnClientEvent:Connect(function(dih)
 	stateortime.time.Text = tostring(math.round(dih-os.time()))
 end)
 select1.MouseButton1Click:Connect(function()
-	charselectmoment(charactermanagermodule.Survivers.Char1)
+	local function bleh()
+		for k, v in pairs(charactermanagermodule.Typesofplayers) do
+			if k == "Surviver" then
+				return k
+			end
+		end
+	end
+	charselectmoment("Char1", bleh())
 	print("yo")
 end)
