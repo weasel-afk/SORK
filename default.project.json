@@ -31,7 +31,7 @@
       "$className": "ScreenGui",
       "script": {
         "$className": "Folder",
-          "$path": "src/client/gui"}
+          "$path": "src/gui"}
         
   }
 }
