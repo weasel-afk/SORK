@@ -6,7 +6,7 @@ local tools = game.ReplicatedStorage.tools:GetChildren()
 
 function characterManager.ChangeChar(typee, selection, player)
 	print(typee)
-	if typee then
+	if typee == "Surviver" then
 		local playerselection = characterManager.Survivers[selection]
 		print(playerselection)
 		print(player.Name)

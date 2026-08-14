@@ -43,22 +43,27 @@ end)
 timeupdate.OnClientEvent:Connect(function(dih)
 	stateortime.time.Text = tostring(math.round(dih-os.time()))
 end)
-select1.MouseButton1Click:Connect(function()
-	-- functions bleh and charfind are like unnessicary future proofing
-	local function bleh()
+local function chartypefindandselect(Type, Char)
+	local function typefind()
 		for k, v in pairs(charactermanagermodule.Typesofplayers) do
-			if k == "Surviver" then
+			if k == Type then
 				return k
 			end
 		end
 	end
 	local function charfind()
 		for k,v in pairs(charactermanagermodule.Survivers) do
-			if k == "Char1" then
+			if k == Char then
 				return k
 			end
 		end
 	end
-	charselectmoment(charfind(), bleh())
-	print("yo")
+	charselectmoment(charfind(), typefind())
+end
+
+select1.MouseButton1Click:Connect(function()
+	-- functions bleh and charfind are like unnessicary future proofing
+	chartypefindandselect("Surviver", "Char1")
+	charselectmoment("Char1", "Surviver")
+	--print("yo")
 end)
