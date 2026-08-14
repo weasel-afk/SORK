@@ -1,5 +1,5 @@
 local characterManager = {}
-characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}}
+characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda", Passive = "Speed", Speed = 20}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", ["Speed"] = 20}}
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
 characterManager.playerCharTable = {}
 local tools = game.ReplicatedStorage.tools:GetChildren()
@@ -18,13 +18,28 @@ function characterManager.ChangeChar(typee, selection, player)
 	end-- add killer system
 end
 
+local function passiveeffectfunction(selection, passive)
+	if passive == "Speed" then
+		return selection
+	end
+end
+
 function characterManager.roundStart(player)
 	for playername, selection in pairs(characterManager.playerCharTable) do
 		if playername == player.Name then
-			local humanoid = game.Workspace:FindFirstChild(player.Name).Humanoid
+			print(selection)
+			local char = game.Workspace:FindFirstChild(player.Name)
+			local humanoid = char.Humanoid
 			humanoid.DisplayName = selection["Name"]
 			humanoid.MaxHealth = selection["Health"]
 			local toolselection = selection["tools"]
+			local passive = selection["Passive"]
+			print(passive)
+			local passiveeffect = passiveeffectfunction(selection[passive], passive)
+			print(passiveeffect)  -- should be 20
+			if passive == "Speed" then
+				humanoid.WalkSpeed = passiveeffect
+			end
 			for i,v in tools do
 				if v.Name == toolselection then
 					local clone = v:Clone()
