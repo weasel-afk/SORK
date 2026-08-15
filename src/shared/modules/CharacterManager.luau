@@ -40,8 +40,8 @@ function characterManager.roundStart(player)
 				humanoid.WalkSpeed = passiveeffect
 			end
 			local clone = tools:FindFirstChild(toolselection)
-			clone:Clone()
-			clone.Parent = player.Backpack
+			local cloned =clone:Clone()
+			cloned.Parent = player.Backpack
 		end 
 	end
 end
