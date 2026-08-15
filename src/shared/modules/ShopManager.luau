@@ -6,11 +6,30 @@ Character manager will call a funtion in shopmanager to check if they own it)
 ]]
 shop.OwnerLog = {}
 
-function shop.Buy()
-	
+function shop.Buy(player, charname)
+	-- makeing a new list for the player if theynot having one
+	local owned = shop.OwnerLog[player.UserId]
+	if not owned then
+		owned = {}
+		shop.OwnerLog[player.UserId] = owned
+	end
+	if table.find(owned, charname) then
+		return false
+	end
+	table.insert(owned, charname)
+	return true
 end
 
-function shop.GetMenu() -- For when GUI requests whats in shop to make it easy to scale
-	
+function shop.DoesOwn(player, charname)
+	-- it checks if chararcter is already owned
+	local owned = shop.OwnerLog[player.UserId]
+	if not owned then
+		return false
+	end
+	return table.find(owned, charname) ~= nil
+end
+
+function shop.GetMenu()
+	return shop.Items
 end
 return shop
