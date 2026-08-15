@@ -1,6 +1,16 @@
 game.Players.PlayerAdded:Connect(function(plr)
 plr.Team = game.Teams.lobby
+
+local leaderstats = Instance.new("Folder")
+leaderstats.Name = "leaderstats"
+leaderstats.Parent = plr
+
+local coins = Instance.new("IntValue")
+coins.Name = "Coins"
+coins.Value = 0
+coins.Parent = leaderstats
 end)
+
 task.wait(3) -- just because ui shows like 3 seconds early, maybe bc of initialization?
 local dih = os.time() + 10
 local modulesRS = game.ReplicatedStorage.Shared.modules
