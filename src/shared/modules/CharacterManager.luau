@@ -2,8 +2,7 @@ local characterManager = {}
 characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda", Passive = "Speed", Speed = 20}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", ["Speed"] = 20}}
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
 characterManager.playerCharTable = {}
-local tools = game.ReplicatedStorage.tools:GetChildren()
-
+local tools = game.ReplicatedStorage.tools
 function characterManager.ChangeChar(typee, selection, player)
 	print(typee)
 	if typee == "Surviver" then
@@ -40,12 +39,9 @@ function characterManager.roundStart(player)
 			if passive == "Speed" then
 				humanoid.WalkSpeed = passiveeffect
 			end
-			for i,v in tools do
-				if v.Name == toolselection then
-					local clone = v:Clone()
-					clone.Parent= player.Backpack
-				end
-			end
+			local clone = tools:FindFirstChild(toolselection)
+			clone:Clone()
+			clone.Parent = player.Backpack
 		end 
 	end
 end
