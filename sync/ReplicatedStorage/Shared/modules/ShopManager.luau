@@ -6,6 +6,10 @@ Character manager will call a funtion in shopmanager to check if they own it)
 ]]
 shop.OwnerLog = {}
 
+shop.Items = {
+	{Name = "Test", Price = 25}
+}
+
 function shop.Buy(player, charname)
 	-- makeing a new list for the player if theynot having one
 	local owned = shop.OwnerLog[player.UserId]

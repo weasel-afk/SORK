@@ -16,10 +16,9 @@ local function passiveeffectfunction(selection, passive)
 	if passive == "Speed" then
 		return selection
 	end
-	return nil
 end
 
-function characterManager.roundStart(player)
+function characterManager.roundStart(player) -- sync test comment
 	if not player then return end
 	local selection = characterManager.playerCharTable[player.UserId]
 	if not selection then return end
