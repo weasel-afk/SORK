@@ -30,12 +30,13 @@ function characterManager.roundStart(player)
 	if not Humanoid then return end
 	Humanoid.DisplayName = selection["Name"]
 	Humanoid.MaxHealth = selection["Health"]
-	local toolselection = selection["tools"]
 	local passive = selection["Passive"]
 	local passiveeffect = passiveeffectfunction(selection[passive], passive)
 	if passive == "Speed" then
 		Humanoid.WalkSpeed = passiveeffect
 	end
+	local toolselection = selection["tools"]
+	if not toolselection then return end
 	local clone = tools:FindFirstChild(toolselection)
 	if not clone then return end
 	local cloned = clone:Clone()
