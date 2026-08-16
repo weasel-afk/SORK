@@ -19,7 +19,7 @@ function shop.Buy(player, charname)
 	table.insert(owned, charname)
 	return true
 end
-
+--test azul
 function shop.DoesOwn(player, charname)
 	-- it checks if chararcter is already owned
 	local owned = shop.OwnerLog[player.UserId]
