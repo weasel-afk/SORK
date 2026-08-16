@@ -1,5 +1,5 @@
 local characterManager = {}
-characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Pro", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
+characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
 -- I know it doesnt have a tool field. i bet ai told you about that.
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
 local shopManager =require(game.ReplicatedStorage.Shared.modules.ShopManager) 
