@@ -1,20 +1,14 @@
 local characterManager = {}
-characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda", Passive = "Speed", Speed = 20}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", ["Speed"] = 20}}
+characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda", Passive = "Speed", Speed = 20}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", Speed = 20}}
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
 characterManager.playerCharTable = {}
-local tools = game.ReplicatedStorage.tools:GetChildren()
-
-function characterManager.ChangeChar(typee, selection, player)
-	print(typee)
-	if typee == "Surviver" then
+local tools = game.ReplicatedStorage.tools
+function characterManager.ChangeChar(SORK, selection, player) --SORK means survivers or killer
+	if SORK == "Surviver" then
 		local playerselection = characterManager.Survivers[selection]
-		print(playerselection)
-		print(player.Name)
-		characterManager.playerCharTable[player.Name] = playerselection
-		print(characterManager.playerCharTable, "table")
+		if not playerselection then return end
+		characterManager.playerCharTable[player.UserId] = playerselection
 	else
-		warn("failed!")
-		print(typee)
 	end-- add killer system
 end
 
@@ -25,29 +19,25 @@ local function passiveeffectfunction(selection, passive)
 end
 
 function characterManager.roundStart(player)
-	for playername, selection in pairs(characterManager.playerCharTable) do
-		if playername == player.Name then
-			print(selection)
-			local char = game.Workspace:FindFirstChild(player.Name)
-			local humanoid = char.Humanoid
-			humanoid.DisplayName = selection["Name"]
-			humanoid.MaxHealth = selection["Health"]
-			local toolselection = selection["tools"]
-			local passive = selection["Passive"]
-			print(passive)
-			local passiveeffect = passiveeffectfunction(selection[passive], passive)
-			print(passiveeffect)  -- should be 20
-			if passive == "Speed" then
-				humanoid.WalkSpeed = passiveeffect
-			end
-			for i,v in tools do
-				if v.Name == toolselection then
-					local clone = v:Clone()
-					clone.Parent= player.Backpack
-				end
-			end
-		end 
+	if not player then return end
+	local selection = characterManager.playerCharTable[player.UserId]
+	if not selection then return end
+	local Char = player.Character
+	if not Char then return end
+	local Humanoid = Char.Humanoid
+	if not Humanoid then return end
+	Humanoid.DisplayName = selection["Name"]
+	Humanoid.MaxHealth = selection["Health"]
+	local toolselection = selection["tools"]
+	local passive = selection["Passive"]
+	local passiveeffect = passiveeffectfunction(selection[passive], passive)
+	if passive == "Speed" then
+		Humanoid.WalkSpeed = passiveeffect
 	end
+	local clone = tools:FindFirstChild(toolselection)
+	if not clone then return end
+	local cloned = clone:Clone()
+	cloned.Parent = player.Backpack
 end
 
 return characterManager
