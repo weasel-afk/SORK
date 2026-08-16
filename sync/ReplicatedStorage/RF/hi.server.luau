@@ -1,3 +1,1 @@
 -- if u ever forget this means remote function and re means remote events
--- "Have a good day and remember to be nice to everyone you meet, even if they are mean to you."
--- the roblox autocomplete

@@ -15,7 +15,6 @@ end
 function roundmanager.startRound()
 	roundmanager.Status = 1
 	RoundstartEvent:FireAllClients(roundmanager.Status)
-	local players = game.Players:GetChildren()
 	for i, v in pairs(game.Players:GetChildren()) do
 		print(charmanager.playerCharTable)
 		v.Team = game.Teams["ingame"]
