@@ -16,6 +16,7 @@ local function passiveeffectfunction(selection, passive)
 	if passive == "Speed" then
 		return selection
 	end
+	return nil
 end
 
 function characterManager.roundStart(player)
