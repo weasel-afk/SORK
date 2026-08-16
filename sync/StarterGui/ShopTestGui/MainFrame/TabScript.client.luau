@@ -40,8 +40,9 @@ end
 
 selectTab(1)
 
--- build a card for every item in ShopManager.Items automatically
 local shop = require(game.ReplicatedStorage.Shared.modules.ShopManager)
+local buyItem = game.ReplicatedStorage.RE.BuyItem
+local buyResult = game.ReplicatedStorage.RE.BuyResult
 local charactersTab = contentHolder:FindFirstChild("CharactersContent1")
 
 local oldCard = charactersTab:FindFirstChildOfClass("Frame")
@@ -106,6 +107,26 @@ for _, item in ipairs(shop.Items) do
 	local buyCorner = Instance.new("UICorner")
 	buyCorner.CornerRadius = UDim.new(0, 8)
 	buyCorner.Parent = buyButton
+
+	buyButton.MouseButton1Click:Connect(function()
+		buyItem:FireServer(item.Name)
+	end)
+
+	buyResult.OnClientEvent:Connect(function(boughtName, success, message)
+		if boughtName ~= item.Name then return end
+		if success then
+			buyButton.Text = "Owned"
+			buyButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+			buyButton.Active = false
+		else
+			local original = buyButton.Text
+			buyButton.Text = message
+			task.wait(1.2)
+			if buyButton.Text == message then
+				buyButton.Text = original
+			end
+		end
+	end)
 end
 
 for _, content in ipairs(tabContents) do

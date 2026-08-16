@@ -1,13 +1,17 @@
 local characterManager = {}
-characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
+characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Pro", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
 -- I know it doesnt have a tool field. i bet ai told you about that.
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
+local shopManager =require(game.ReplicatedStorage.Shared.modules.ShopManager) 
 characterManager.playerCharTable = {}
 local tools = game.ReplicatedStorage.tools
 function characterManager.ChangeChar(SORK, selection, player) --SORK means survivers or killer
 	if SORK == "Surviver" then
 		local playerselection = characterManager.Survivers[selection]
 		if not playerselection then return end
+		if shopManager.DoesOwn(player, playerselection) ~= true then return
+
+		end
 		characterManager.playerCharTable[player.UserId] = playerselection
 	else
 	end-- add killer system
