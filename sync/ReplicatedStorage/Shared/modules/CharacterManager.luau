@@ -10,7 +10,6 @@ function characterManager.ChangeChar(SORK, selection, player) --SORK means survi
 		local playerselection = characterManager.Survivers[selection]
 		if not playerselection then return end
 		if shopManager.DoesOwn(player, playerselection) ~= true then return
-
 		end
 		characterManager.playerCharTable[player.UserId] = playerselection
 	else

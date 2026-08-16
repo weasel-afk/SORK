@@ -8,7 +8,7 @@ shop.OwnerLog = {}
 
 shop.Items = {
 	{Name = "Noob", Price = 25},
-	{Name = "Pro", Price = 67},
+	{Name = "Pro", Price = 25},
 }
 
 function shop.Buy(player, charname)

@@ -1,30 +1,32 @@
+--Variables
 local frame = script.Parent
 local tabBar = frame.TabBar
 local contentHolder = frame.ContentHolder
-
 local tabButtons = {}
-for _, btn in ipairs(tabBar:GetChildren()) do
+
+for _, btn in ipairs(tabBar:GetChildren()) do -- Add tabs to array
 	if btn:IsA("TextButton") then
 		table.insert(tabButtons, btn)
 	end
 end
+
 table.sort(tabButtons, function(a, b) return a.LayoutOrder < b.LayoutOrder end)
 
 local tabContents = {}
-for _, content in ipairs(contentHolder:GetChildren()) do
+for _, content in ipairs(contentHolder:GetChildren()) do -- Get scrolling frames (These contain the content for different tabs)
 	if content:IsA("ScrollingFrame") then
 		table.insert(tabContents, content)
 	end
 end
 
-table.sort(tabContents, function(frameA, frameB)
+table.sort(tabContents, function(frameA, frameB) -- Sort by turning the last number (i think) into a way to compare
 	local frameAOrder = tonumber(frameA.Name:match("(%d+)$")) or 0
 	local frameBOrder = tonumber(frameB.Name:match("(%d+)$")) or 0
 	return frameAOrder < frameBOrder
 end)
 
 local function selectTab(index)
-	for i = 1, #tabContents do
+	for i = 1, #tabContents do -- Because the tabContent table was sorted, it can be used to index by number, and be shown
 		tabContents[i].Visible = (i == index)
 		tabButtons[i].BackgroundColor3 = (i == index) and Color3.fromRGB(255, 221, 0) or Color3.fromRGB(50, 50, 50)
 		tabButtons[i].TextColor3 = (i == index) and Color3.fromRGB(30, 30, 30) or Color3.fromRGB(255, 255, 255)
@@ -33,13 +35,13 @@ end
 
 for index = 1, #tabButtons do
 	local capturedIndex = index
-	tabButtons[index].MouseButton1Click:Connect(function()
+	tabButtons[index].MouseButton1Click:Connect(function() -- Sets a MouseButton1Click listener for each tab, and on click will fire selectTab
 		selectTab(capturedIndex)
 	end)
 end
 
-selectTab(1)
-
+selectTab(1) -- Sets tab to first tab
+-- Get needed variables
 local shop = require(game.ReplicatedStorage.Shared.modules.ShopManager)
 local buyItem = game.ReplicatedStorage.RE.BuyItem
 local buyResult = game.ReplicatedStorage.RE.BuyResult
@@ -47,10 +49,11 @@ local charactersTab = contentHolder:FindFirstChild("CharactersContent1")
 
 local oldCard = charactersTab:FindFirstChildOfClass("Frame")
 if oldCard then
-	oldCard:Destroy()
+	oldCard:Destroy()-- Removes test tab to be filled in by other cards
 end
 
 for _, item in ipairs(shop.Items) do
+	-- This will get all the shop items, and turn them into cards to be seen when shop is opened
 	local card = Instance.new("Frame")
 	card.Size = UDim2.new(0, 170, 0, 150)
 	card.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -110,9 +113,9 @@ for _, item in ipairs(shop.Items) do
 
 	buyButton.MouseButton1Click:Connect(function()
 		buyItem:FireServer(item.Name)
-	end)
+	end) -- Listen to buy button click
 
-	buyResult.OnClientEvent:Connect(function(boughtName, success, message)
+	buyResult.OnClientEvent:Connect(function(boughtName, success, message) -- Make it so user knows what happened to their purchase
 		if boughtName ~= item.Name then return end
 		if success then
 			buyButton.Text = "Owned"
@@ -140,4 +143,5 @@ for _, content in ipairs(tabContents) do
 	layout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(updateCanvas)
 	content:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateCanvas)
 	updateCanvas()
+	-- Set sizes
 end
