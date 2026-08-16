@@ -7,14 +7,14 @@ local stateortime = parent.infoframe
 local charframe = parent.charFrame
 local rs = game.ReplicatedStorage
 local re = rs.RE
-local rend = re.roundEnd
+local rend = re.roundEnd -- never listened to below, state label wont update when round ends
 local rstart = re.roundStart
 local timeupdate = re.timeupdate
 local showframe = parent.showframe
 local button1 = showframe.button1
 local button2 = showframe.button2
 local select1 = charframe.Select1
-local select2 = charframe.Select2
+local select2 = charframe.Select2 -- no click handler wired up below, button does nothing rn
 local charselect = re.CharSelect
 local charactermanagermodule = require(rs.Shared.modules.CharacterManager)
 

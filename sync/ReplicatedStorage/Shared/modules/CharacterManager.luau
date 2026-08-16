@@ -1,5 +1,5 @@
 local characterManager = {}
-characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda", Passive = "Speed", Speed = 20}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", Speed = 20}}
+characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda", Passive = "Speed", Speed = 20}, Char2 = {Name = "Poopy Man", Health = 75, Passive = "Speed", Speed = 20}} -- char2 has no tools field, may cause issues
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
 characterManager.playerCharTable = {}
 local tools = game.ReplicatedStorage.tools
@@ -18,7 +18,7 @@ local function passiveeffectfunction(selection, passive)
 	end
 end
 
-function characterManager.roundStart(player) -- sync test comment
+function characterManager.roundStart(player)
 	if not player then return end
 	local selection = characterManager.playerCharTable[player.UserId]
 	if not selection then return end
