@@ -1,6 +1,7 @@
 local tool = script.Parent
 local playersSRV = game:GetService("Players")
 local player = tool.Parent.Parent
+-- assumes character already exists in workspace when tool loads, could hang if used too early
 local char = game.Workspace:WaitForChild(player.Name)
 print(char)
 local humanoid = char:FindFirstChild("Humanoid")
