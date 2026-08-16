@@ -15,7 +15,6 @@ end
 function roundmanager.startRound()
 	roundmanager.Status = 1
 	RoundstartEvent:FireAllClients(roundmanager.Status)
-	local players = game.Players:GetChildren()
 	for i, v in pairs(game.Players:GetChildren()) do
 		print(charmanager.playerCharTable)
 		v.Team = game.Teams["ingame"]
@@ -45,3 +44,4 @@ function roundmanager.changeStatus(status)
 end
 
 return roundmanager
+--ife. I love my world. I love my universe. I love my everything. I love you all.

@@ -1,0 +1,1 @@
+-- if u ever forget this means remote function and re means remote events

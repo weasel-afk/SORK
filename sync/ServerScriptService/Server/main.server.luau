@@ -1,8 +1,18 @@
 game.Players.PlayerAdded:Connect(function(plr)
 plr.Team = game.Teams.lobby
+
+local leaderstats = Instance.new("Folder")
+leaderstats.Name = "leaderstats"
+leaderstats.Parent = plr
+
+local coins = Instance.new("IntValue")
+coins.Name = "Coins"
+coins.Value = 1000
+coins.Parent = leaderstats
 end)
+
 task.wait(3) -- just because ui shows like 3 seconds early, maybe bc of initialization?
-local dih = os.time() + 10
+local TimeToStart = os.time() + 10
 local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE
@@ -14,15 +24,15 @@ end)
 local roundManager = require(modulesRS.roundManager)
 
 while true do-- just like brod cast uh time till start / end yk
-	timeupdate:FireAllClients(dih)
+	timeupdate:FireAllClients(TimeToStart)
 	task.wait(1)
-	if dih <= os.time() then
+	if TimeToStart <= os.time() then
 		if roundManager.Status == 0 then
 			roundManager.startRound()
-			dih = os.time() + 10
+			TimeToStart = os.time() + 10
 		elseif roundManager.Status ~= 0 then
 			roundManager.stopRound()
-			dih = os.time() + 10
+			TimeToStart = os.time() + 10
 		end
 	end
 end
