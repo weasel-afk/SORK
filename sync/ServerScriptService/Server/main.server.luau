@@ -7,7 +7,7 @@ leaderstats.Parent = plr
 
 local coins = Instance.new("IntValue")
 coins.Name = "Coins"
-coins.Value = 0
+coins.Value = 1000
 coins.Parent = leaderstats
 end)
 
