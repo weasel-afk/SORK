@@ -14,7 +14,9 @@ local showframe = parent.showframe
 local button1 = showframe.button1
 local button2 = showframe.button2
 local select1 = charframe.Select1
-local select2 = charframe.Select2 -- no click handler wired up below, button does nothing rn
+local select2 = charframe.Select2
+local select3 = charframe.Select3
+local select4 = charframe.Select4
 local charselect = re.CharSelect
 local charactermanagermodule = require(rs.Shared.modules.CharacterManager)
 
@@ -23,7 +25,6 @@ local function changeVisability(towhat)
 end
 local function charselectmoment(char, typeofplayer)
 	charselect:FireServer(typeofplayer, char)
-	print(charactermanagermodule.Typesofplayers["Surviver"])
 end
 button1.MouseButton1Click:Connect(function()
 	changeVisability(stateortime)
@@ -45,4 +46,10 @@ select1.MouseButton1Click:Connect(function()
 end)
 select2.MouseButton1Click:Connect(function()
 	charselectmoment("Char2", "Surviver")
+end)
+select3.MouseButton1Click:Connect(function()
+	charselectmoment("Killer1", "Killer")
+end)
+select4.MouseButton1Click:Connect(function()
+	
 end)

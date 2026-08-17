@@ -9,6 +9,7 @@ shop.OwnerLog = {}
 shop.Items = {
 	{Name = "Noob", Price = 25},
 	{Name = "Pro", Price = 25},
+	{Name = "Sword Man", Price = 100}
 }
 
 function shop.Buy(player, charname)
@@ -31,7 +32,9 @@ function shop.DoesOwn(player, charname)
 	if not owned then
 		return false
 	end
-	return table.find(owned, charname) ~= nil
+	print(owned)
+	print(charname)
+	return table.find(owned, charname["Name"], 1) ~= nil
 end
 
 function shop.GetMenu()

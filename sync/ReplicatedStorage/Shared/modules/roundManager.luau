@@ -16,7 +16,6 @@ function roundmanager.startRound()
 	roundmanager.Status = 1
 	RoundstartEvent:FireAllClients(roundmanager.Status)
 	for i, v in pairs(game.Players:GetChildren()) do
-		print(charmanager.playerCharTable)
 		v.Team = game.Teams["ingame"]
 		v:LoadCharacter()
 		if spawnpoint then
