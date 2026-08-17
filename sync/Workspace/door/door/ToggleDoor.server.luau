@@ -20,7 +20,13 @@ anglevalue.Changed:Connect(function(theta)
 end)
 
 clickdetector.MouseClick:Connect(function(player)
-	if characterManager.playerCharTable[player.UserId] ~= "Char1" or "Char2" and roundmanager.Status ~= 2 then return end
+	local character = characterManager.playerCharTable[player.UserId]
+	local isSurvivor = character == characterManager.Survivers.Char1
+		or character == characterManager.Survivers.Char2
+
+	if not isSurvivor and roundmanager.Status == 2 then
+		return
+	end
 	if isanimating then return end
 	isanimating = true
 	local target = isopen and 0 or 90
