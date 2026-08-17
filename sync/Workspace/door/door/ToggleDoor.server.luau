@@ -8,6 +8,7 @@ local hingepos = closedcframe:PointToWorldSpace(Vector3.new(hingeside * halfwidt
 local isopen = false
 local isanimating = false
 local clickdetector = Instance.new("ClickDetector")
+local characterManager = require(game.ReplicatedStorage.Shared.modules.CharacterManager)
 
 clickdetector.MaxActivationDistance = 15
 clickdetector.Parent = doorpart
@@ -18,8 +19,14 @@ anglevalue.Changed:Connect(function(theta)
 	doorpart.CFrame = hingecframe * CFrame.Angles(0, math.rad(theta), 0) * hingecframe:Inverse() * closedcframe
 end)
 
-clickdetector.MouseClick:Connect(function()
-	if roundmanager.Status ~= 2 then return end
+clickdetector.MouseClick:Connect(function(player)
+	local character = characterManager.playerCharTable[player.UserId]
+	local isSurvivor = character == characterManager.Survivers.Char1
+		or character == characterManager.Survivers.Char2
+
+	if not isSurvivor and roundmanager.Status == 2 then
+		return
+	end
 	if isanimating then return end
 	isanimating = true
 	local target = isopen and 0 or 90
