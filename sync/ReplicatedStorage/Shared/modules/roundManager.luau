@@ -22,7 +22,6 @@ function roundmanager.startRound()
 			v.Character:WaitForChild("HumanoidRootPart").CFrame = spawnpoint.CFrame + Vector3.new(0, 3, 0)
 		end
 		setPlayerUp(v)
-		print(v.Team)
 	end
 end
 
@@ -33,7 +32,6 @@ function roundmanager.stopRound()
 	for i, v in pairs(game.Players:GetChildren()) do
 		v.Team = game.Teams["lobby"]
 		v:LoadCharacter()
-		print(v.Team)
 	end
 end
 

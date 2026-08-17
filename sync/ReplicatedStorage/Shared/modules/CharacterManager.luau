@@ -2,7 +2,7 @@ local characterManager = {}
 characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Pro", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
 -- I know it doesnt have a tool field. i bet ai told you about that.
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
-characterManager.Killers = {Killer1 = {Name = "Sword man", Health = 500}}
+characterManager.Killers = {Killer1 = {Name = "Sword Man", Health = 500, tools = "ClassicSword"}}
 local shopManager =require(game.ReplicatedStorage.Shared.modules.ShopManager) 
 characterManager.playerCharTable = {}
 local tools = game.ReplicatedStorage.tools
@@ -16,10 +16,9 @@ function characterManager.ChangeChar(SORK, selection, player) --SORK means survi
 	elseif SORK == "Killer" then
 		local playerselection = characterManager.Killers[selection]
 		if not playerselection then warn("nope :(") return end
-		if shopManager.DoesOwn(player, playerselection) ~= true then  print("rin tin tin")return
+		if shopManager.DoesOwn(player, playerselection) ~= true then print("rin tin tin") return
 		end
 		characterManager.playerCharTable[player.UserId] = playerselection
-		print(characterManager.playerCharTable)
 	end-- add killer system
 end
 
@@ -40,6 +39,7 @@ function characterManager.roundStart(player)
 	if not Humanoid then return end
 	Humanoid.DisplayName = selection["Name"]
 	Humanoid.MaxHealth = selection["Health"]
+	Humanoid.Health = selection["Health"]
 	local passive = selection["Passive"]
 	local passiveeffect = passiveeffectfunction(selection[passive], passive)
 	if passive == "Speed" then

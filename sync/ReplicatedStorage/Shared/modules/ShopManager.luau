@@ -32,8 +32,7 @@ function shop.DoesOwn(player, charname)
 	if not owned then
 		return false
 	end
-	print(owned)
-	print(charname)
+
 	return table.find(owned, charname["Name"], 1) ~= nil
 end
 

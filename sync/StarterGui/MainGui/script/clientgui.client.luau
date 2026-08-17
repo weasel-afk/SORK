@@ -6,6 +6,7 @@ local parent = script.Parent.Parent
 local stateortime = parent.infoframe
 local charframe = parent.charFrame
 local rs = game.ReplicatedStorage
+local countdownSFX = rs.misc.Audio.Countdown
 local re = rs.RE
 local rend = re.roundEnd -- never listened to below, state label wont update when round ends
 local rstart = re.roundStart
@@ -36,7 +37,12 @@ rstart.OnClientEvent:Connect(function(idk1bro1dont1ask1me)
 	stateortime.state.Text = tostring(idk1bro1dont1ask1me)
 end)
 timeupdate.OnClientEvent:Connect(function(TimeToStart)
-	stateortime.time.Text = tostring(math.round(TimeToStart-os.time()))
+	local countdown = math.round(TimeToStart-os.time())
+	stateortime.time.Text = tostring(countdown)
+	
+	if countdown <= 3 then 
+		countdownSFX:Play()
+	end
 end)
 
 select1.MouseButton1Click:Connect(function()
