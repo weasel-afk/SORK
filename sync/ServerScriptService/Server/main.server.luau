@@ -12,7 +12,7 @@ coins.Parent = leaderstats
 end)
 
 task.wait(3) -- just because ui shows like 3 seconds early, maybe bc of initialization?
-local TimeToStart = os.time() + 5
+local TimeToStart = os.time() + 10
 local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE

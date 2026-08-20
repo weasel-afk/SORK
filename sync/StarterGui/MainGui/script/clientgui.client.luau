@@ -6,6 +6,7 @@ local parent = script.Parent.Parent
 local stateortime = parent.infoframe
 local charframe = parent.charFrame
 local rs = game.ReplicatedStorage
+local countdownSFX = rs.misc.Audio.Countdown
 local re = rs.RE
 local rend = re.roundEnd -- never listened to below, state label wont update when round ends
 local rstart = re.roundStart
@@ -14,7 +15,9 @@ local showframe = parent.showframe
 local button1 = showframe.button1
 local button2 = showframe.button2
 local select1 = charframe.Select1
-local select2 = charframe.Select2 -- no click handler wired up below, button does nothing rn
+local select2 = charframe.Select2
+local select3 = charframe.Select3
+local select4 = charframe.Select4
 local charselect = re.CharSelect
 local charactermanagermodule = require(rs.Shared.modules.CharacterManager)
 
@@ -23,7 +26,6 @@ local function changeVisability(towhat)
 end
 local function charselectmoment(char, typeofplayer)
 	charselect:FireServer(typeofplayer, char)
-	print(charactermanagermodule.Typesofplayers["Surviver"])
 end
 button1.MouseButton1Click:Connect(function()
 	changeVisability(stateortime)
@@ -35,7 +37,12 @@ rstart.OnClientEvent:Connect(function(idk1bro1dont1ask1me)
 	stateortime.state.Text = tostring(idk1bro1dont1ask1me)
 end)
 timeupdate.OnClientEvent:Connect(function(TimeToStart)
-	stateortime.time.Text = tostring(math.round(TimeToStart-os.time()))
+	local countdown = math.round(TimeToStart-os.time())
+	stateortime.time.Text = tostring(countdown)
+	
+	if countdown <= 3 then 
+		countdownSFX:Play()
+	end
 end)
 
 select1.MouseButton1Click:Connect(function()
@@ -45,4 +52,10 @@ select1.MouseButton1Click:Connect(function()
 end)
 select2.MouseButton1Click:Connect(function()
 	charselectmoment("Char2", "Surviver")
+end)
+select3.MouseButton1Click:Connect(function()
+	charselectmoment("Killer1", "Killer")
+end)
+select4.MouseButton1Click:Connect(function()
+	
 end)

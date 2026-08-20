@@ -2,8 +2,10 @@ local characterManager = {}
 characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Pro", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
 -- I know it doesnt have a tool field. i bet ai told you about that.
 characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
+characterManager.Killers = {Killer1 = {Name = "Sword Man", Health = 500, tools = "ClassicSword"}}
 local shopManager =require(game.ReplicatedStorage.Shared.modules.ShopManager) 
 characterManager.playerCharTable = {}
+characterManager.playerKillTable = {} -- This is the killer equvialnt of playerCharTable, so that both characters can be stored
 local tools = game.ReplicatedStorage.tools
 function characterManager.ChangeChar(SORK, selection, player) --SORK means survivers or killer
 	if SORK == "Surviver" then
@@ -12,8 +14,13 @@ function characterManager.ChangeChar(SORK, selection, player) --SORK means survi
 		if shopManager.DoesOwn(player, playerselection) ~= true then return
 		end
 		characterManager.playerCharTable[player.UserId] = playerselection
-	else
-	end-- add killer system
+	elseif SORK == "Killer" then
+		local playerselection = characterManager.Killers[selection]
+		if not playerselection then warn("nope :(") return end
+		if shopManager.DoesOwn(player, playerselection) ~= true then print("rin tin tin") return
+		end
+		characterManager.playerKillTable[player.UserId] = playerselection
+	end
 end
 
 local function passiveeffectfunction(selection, passive)
@@ -23,16 +30,27 @@ local function passiveeffectfunction(selection, passive)
 	return nil
 end
 
+local function ifnotthen(table)
+	for k, v in pairs(table) do
+		if not v then
+			return false
+		end
+	end
+	return true
+end
+
 function characterManager.roundStart(player)
-	if not player then return end
 	local selection = characterManager.playerCharTable[player.UserId]
-	if not selection then return end
+	local KillerSelection = characterManager.playerKillTable[player.UserId]
 	local Char = player.Character
-	if not Char then return end
 	local Humanoid = Char.Humanoid
-	if not Humanoid then return end
+	if not ifnotthen({selection, KillerSelection, Char, Humanoid}) then -- top ten most innovative things in diddys life:
+		warn(" is nil and cannot move on")
+		return
+	end
 	Humanoid.DisplayName = selection["Name"]
 	Humanoid.MaxHealth = selection["Health"]
+	Humanoid.Health = selection["Health"]
 	local passive = selection["Passive"]
 	local passiveeffect = passiveeffectfunction(selection[passive], passive)
 	if passive == "Speed" then
