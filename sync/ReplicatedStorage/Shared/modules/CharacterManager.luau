@@ -5,6 +5,7 @@ characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer
 characterManager.Killers = {Killer1 = {Name = "Sword Man", Health = 500, tools = "ClassicSword"}}
 local shopManager =require(game.ReplicatedStorage.Shared.modules.ShopManager) 
 characterManager.playerCharTable = {}
+characterManager.playerKillTable = {} -- This is the killer equvialnt of playerCharTable, so that both characters can be stored
 local tools = game.ReplicatedStorage.tools
 function characterManager.ChangeChar(SORK, selection, player) --SORK means survivers or killer
 	if SORK == "Surviver" then
@@ -18,8 +19,8 @@ function characterManager.ChangeChar(SORK, selection, player) --SORK means survi
 		if not playerselection then warn("nope :(") return end
 		if shopManager.DoesOwn(player, playerselection) ~= true then print("rin tin tin") return
 		end
-		characterManager.playerCharTable[player.UserId] = playerselection
-	end-- add killer system
+		characterManager.playerKillTable[player.UserId] = playerselection
+	end
 end
 
 local function passiveeffectfunction(selection, passive)
@@ -29,14 +30,24 @@ local function passiveeffectfunction(selection, passive)
 	return nil
 end
 
+local function ifnotthen(table)
+	for k, v in pairs(table) do
+		if not v then
+			return false
+		end
+	end
+	return true
+end
+
 function characterManager.roundStart(player)
-	if not player then return end
 	local selection = characterManager.playerCharTable[player.UserId]
-	if not selection then return end
+	local KillerSelection = characterManager.playerKillTable[player.UserId]
 	local Char = player.Character
-	if not Char then return end
 	local Humanoid = Char.Humanoid
-	if not Humanoid then return end
+	if not ifnotthen({selection, KillerSelection, Char, Humanoid}) then -- top ten most innovative things in diddys life:
+		warn(" is nil and cannot move on")
+		return
+	end
 	Humanoid.DisplayName = selection["Name"]
 	Humanoid.MaxHealth = selection["Health"]
 	Humanoid.Health = selection["Health"]
