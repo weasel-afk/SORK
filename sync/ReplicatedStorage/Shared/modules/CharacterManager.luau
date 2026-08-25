@@ -39,29 +39,63 @@ local function ifnotthen(table)
 	return true
 end
 
-function characterManager.roundStart(player)
-	local selection = characterManager.playerCharTable[player.UserId]
-	local KillerSelection = characterManager.playerKillTable[player.UserId]
-	local Char = player.Character
-	local Humanoid = Char.Humanoid
-	if not ifnotthen({selection, KillerSelection, Char, Humanoid}) then -- top ten most innovative things in diddys life:
-		warn(" is nil and cannot move on")
-		return
+local Players = game:GetService("Players")
+
+function characterManager.GetKillerNumber()
+	local userIds = {}
+
+	for _, player in ipairs(Players:GetPlayers()) do
+		table.insert(userIds, player.UserId)
 	end
-	Humanoid.DisplayName = selection["Name"]
-	Humanoid.MaxHealth = selection["Health"]
-	Humanoid.Health = selection["Health"]
-	local passive = selection["Passive"]
-	local passiveeffect = passiveeffectfunction(selection[passive], passive)
-	if passive == "Speed" then
-		Humanoid.WalkSpeed = passiveeffect
-	end
+	
+	local Numbersofplayers = #userIds
+	local killerNumber = math.random(1, Numbersofplayers)
+	local killer = userIds[killerNumber]
+	print(killer)
+	return killer
+end
+
+local function tool(selection, player)
 	local toolselection = selection["tools"]
 	if not toolselection then return end
 	local clone = tools:FindFirstChild(toolselection)
 	if not clone then return end
 	local cloned = clone:Clone()
 	cloned.Parent = player.Backpack
+end
+
+function characterManager.roundStart(player, killer)
+	local selection = characterManager.playerCharTable[player.UserId]
+	local KillerSelection = characterManager.playerKillTable[player.UserId]
+	local Char = player.Character
+	local Humanoid = Char.Humanoid
+	if not ifnotthen({selection, KillerSelection, Char, Humanoid}) then -- top ten most innovative things in diddys life:
+		warn(" is nil and cannot move on") -- shh dont tell anyone but this doesnt really work
+		return -- 🤫🤫🤫🤫🤫🤫🤫
+	end
+	if player.UserId == killer then
+		warn("bro is killa")
+		Humanoid.DisplayName = KillerSelection["Name"]
+		Humanoid.MaxHealth = KillerSelection["Health"]
+		Humanoid.Health = KillerSelection["Health"]
+		local passive = KillerSelection["Passive"]
+		local passiveeffect = passiveeffectfunction(KillerSelection[passive], passive)
+		if passive == "Speed" then
+			Humanoid.WalkSpeed = passiveeffect
+		end
+		tool(KillerSelection, player)
+	else
+		warn("nah bro aint lucky")
+		Humanoid.DisplayName = selection["Name"]
+		Humanoid.MaxHealth = selection["Health"]
+		Humanoid.Health = selection["Health"]
+		local passive = selection["Passive"]
+		local passiveeffect = passiveeffectfunction(selection[passive], passive)
+		if passive == "Speed" then
+			Humanoid.WalkSpeed = passiveeffect
+		end
+		tool(selection, player)
+	end
 end
 
 return characterManager
