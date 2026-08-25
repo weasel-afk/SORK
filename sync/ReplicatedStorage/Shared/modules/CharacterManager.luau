@@ -42,17 +42,18 @@ end
 local Players = game:GetService("Players")
 
 function characterManager.GetKillerNumber()
-	local userIds = {}
+	local killerUserIds = {}
 
 	for _, player in ipairs(Players:GetPlayers()) do
-		table.insert(userIds, player.UserId)
+		if characterManager.playerKillTable[player.UserId] then
+			table.insert(killerUserIds, player.UserId)
+		end
 	end
 	
-	local Numbersofplayers = #userIds
-	local killerNumber = math.random(1, Numbersofplayers)
-	local killer = userIds[killerNumber]
-	print(killer)
-	return killer
+	if #killerUserIds == 0 then
+		return nil
+	end
+	return killerUserIds[math.random(1, #killerUserIds)]
 end
 
 local function tool(selection, player)
