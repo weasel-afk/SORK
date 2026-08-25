@@ -68,12 +68,20 @@ function characterManager.roundStart(player, killer)
 	local selection = characterManager.playerCharTable[player.UserId]
 	local KillerSelection = characterManager.playerKillTable[player.UserId]
 	local Char = player.Character
+	if not Char then
+		warn("Character is nil and cannot move on")
+		return
+	end
 	local Humanoid = Char.Humanoid
-	if not ifnotthen({selection, KillerSelection, Char, Humanoid}) then -- top ten most innovative things in diddys life:
-		warn(" is nil and cannot move on") -- shh dont tell anyone but this doesnt really work
-		return -- 🤫🤫🤫🤫🤫🤫🤫
+	if not Humanoid then
+		warn("Humanoid is nil and cannot move on")
+		return
 	end
 	if player.UserId == killer then
+		if not KillerSelection then
+			warn("KillerSelection is nil and cannot move on")
+			return
+		end
 		warn("bro is killa")
 		Humanoid.DisplayName = KillerSelection["Name"]
 		Humanoid.MaxHealth = KillerSelection["Health"]
@@ -85,6 +93,10 @@ function characterManager.roundStart(player, killer)
 		end
 		tool(KillerSelection, player)
 	else
+		if not selection then
+			warn("selection is nil and cannot move on")
+			return
+		end
 		warn("nah bro aint lucky")
 		Humanoid.DisplayName = selection["Name"]
 		Humanoid.MaxHealth = selection["Health"]
