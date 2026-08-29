@@ -11,3 +11,5 @@ You can also see everything in explorer, but maybe not in the easiest way.
 Well, like it's really just meant to be so if anyone wants to find some code to use they can
 I don't care enough to make a guide on how to use this, you can find it yourself.
 You just need azul and Rokit, although its just wally
+# Here is the Ascii layout I made with copilot just to make it easier :)
+(sorry it messed up lemme fix later)
