@@ -16,4 +16,11 @@ function Maploader.loadMap(mapName)
 	return false
 end
 
+function Maploader.DestroyMap(mapName)
+	local map = game.Workspace:FindFirstChild(mapName)
+	if map then
+		map:Destroy()
+	end
+end
+
 return Maploader

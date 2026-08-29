@@ -22,16 +22,17 @@ local roundManager = require(modulesRS.roundManager)
 re.CharSelect.OnServerEvent:Connect(function(player, s1or1k, char) 
 	charactermanager.ChangeChar(s1or1k, char, player)
 end)
+local map = nil
 
 while true do-- just like brod cast uh time till start / end yk
 	timeupdate:FireAllClients(TimeToStart)
 	task.wait(1)
 	if TimeToStart <= os.time() then
 		if roundManager.Status == 0 then
-			roundManager.startRound()
+			map = roundManager.startRound()
 			TimeToStart = os.time() + 30
 		elseif roundManager.Status ~= 0 then
-			roundManager.stopRound()
+			roundManager.stopRound(map)
 			TimeToStart = os.time() + 20
 		end
 	else
