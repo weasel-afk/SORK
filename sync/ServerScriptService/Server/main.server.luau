@@ -17,10 +17,11 @@ local modulesRS = game.ReplicatedStorage.Shared.modules
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE
 local timeupdate = re.timeupdate
+local maploader = require(modulesRS.MapLoader)
+local roundManager = require(modulesRS.roundManager)
 re.CharSelect.OnServerEvent:Connect(function(player, s1or1k, char) 
 	charactermanager.ChangeChar(s1or1k, char, player)
 end)
-local roundManager = require(modulesRS.roundManager)
 
 while true do-- just like brod cast uh time till start / end yk
 	timeupdate:FireAllClients(TimeToStart)

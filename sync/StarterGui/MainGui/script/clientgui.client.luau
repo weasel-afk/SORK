@@ -23,6 +23,7 @@ local charactermanagermodule = require(rs.Shared.modules.CharacterManager)
 
 local function changeVisability(towhat)
 	towhat.Visible = not towhat.Visible
+	towhat.Interactable = not towhat.Interactable
 end
 local function charselectmoment(char, typeofplayer)
 	charselect:FireServer(typeofplayer, char)
