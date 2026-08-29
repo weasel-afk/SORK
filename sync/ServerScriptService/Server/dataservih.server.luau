@@ -9,7 +9,7 @@ local function loadData(player)
 	if success and data then
 		return data
 	end
-	return {Coins = 0, Owned = {}}
+	return { Coins = 0, Owned = {} }
 end
 
 local function saveData(player)
@@ -17,7 +17,7 @@ local function saveData(player)
 	local coins = leaderstats and leaderstats:FindFirstChild("Coins")
 	local coinsValue = coins and coins.Value or 0
 	local owned = shop.OwnerLog[player.UserId] or {}
-	local data = {Coins = coinsValue, Owned = owned}
+	local data = { Coins = coinsValue, Owned = owned }
 
 	local success, err = pcall(function()
 		playerDataStore:SetAsync("Player_" .. player.UserId, data)

@@ -21,16 +21,21 @@ end)
 
 clickdetector.MouseClick:Connect(function(player)
 	local character = characterManager.playerCharTable[player.UserId]
-	local isSurvivor = character == characterManager.Survivers.Char1
-		or character == characterManager.Survivers.Char2
+	local isSurvivor = character == characterManager.Survivers.Char1 or character == characterManager.Survivers.Char2
 
 	if not isSurvivor and roundmanager.Status == 2 then
 		return
 	end
-	if isanimating then return end
+	if isanimating then
+		return
+	end
 	isanimating = true
 	local target = isopen and 0 or 90
-	local tween = tweenservice:Create(anglevalue, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Value = target})
+	local tween = tweenservice:Create(
+		anglevalue,
+		TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+		{ Value = target }
+	)
 	tween.Completed:Once(function()
 		isanimating = false
 		isopen = not isopen

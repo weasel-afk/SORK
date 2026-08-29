@@ -7,9 +7,9 @@ Character manager will call a funtion in shopmanager to check if they own it)
 shop.OwnerLog = {}
 
 shop.Items = {
-	{Name = "Noob", Price = 25},
-	{Name = "Pro", Price = 25},
-	{Name = "Sword Man", Price = 100}
+	{ Name = "Noob", Price = 25 },
+	{ Name = "Pro", Price = 25 },
+	{ Name = "Sword Man", Price = 100 },
 }
 
 function shop.Buy(player, charname)

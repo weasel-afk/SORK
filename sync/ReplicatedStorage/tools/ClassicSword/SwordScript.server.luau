@@ -10,7 +10,7 @@ function Create(ty)
 	return function(data)
 		local obj = Instance.new(ty)
 		for k, v in pairs(data) do
-			if type(k) == 'number' then
+			if type(k) == "number" then
 				v.Parent = obj
 			else
 				obj[k] = v
@@ -29,26 +29,26 @@ RunService = game:GetService("RunService")
 DamageValues = {
 	BaseDamage = 5,
 	SlashDamage = 10,
-	LungeDamage = 30
+	LungeDamage = 30,
 }
 
 --For R15 avatars
 Animations = {
 	R15Slash = 522635514,
-	R15Lunge = 522638767
+	R15Lunge = 522638767,
 }
 
 Damage = DamageValues.BaseDamage
 
 Grips = {
 	Up = CFrame.new(0, 0, -1.70000005, 0, 0, 1, 1, 0, 0, 0, 1, 0),
-	Out = CFrame.new(0, 0, -1.70000005, 0, 1, 0, 1, -0, 0, 0, 0, -1)
+	Out = CFrame.new(0, 0, -1.70000005, 0, 1, 0, 1, -0, 0, 0, 0, -1),
 }
 
 Sounds = {
 	Slash = Handle:WaitForChild("SwordSlash"),
 	Lunge = Handle:WaitForChild("SwordLunge"),
-	Unsheath = Handle:WaitForChild("Unsheath")
+	Unsheath = Handle:WaitForChild("Unsheath"),
 }
 
 ToolEquipped = false
@@ -64,7 +64,13 @@ Tool.Grip = Grips.Up
 Tool.Enabled = true
 
 function IsTeamMate(Player1, Player2)
-	return (Player1 and Player2 and not Player1.Neutral and not Player2.Neutral and Player1.TeamColor == Player2.TeamColor)
+	return (
+		Player1
+		and Player2
+		and not Player1.Neutral
+		and not Player2.Neutral
+		and Player1.TeamColor == Player2.TeamColor
+	)
 end
 
 function TagHumanoid(humanoid, player)
@@ -109,9 +115,8 @@ function Blow(Hit)
 	end
 	UntagHumanoid(humanoid)
 	TagHumanoid(humanoid, Player)
-	humanoid:TakeDamage(Damage)	
+	humanoid:TakeDamage(Damage)
 end
-
 
 function Attack()
 	Damage = DamageValues.SlashDamage
@@ -130,14 +135,14 @@ function Attack()
 				Track:Play(0)
 			end
 		end
-	end	
+	end
 end
 
 function Lunge()
 	Damage = DamageValues.LungeDamage
 
 	Sounds.Lunge:Play()
-	
+
 	if Humanoid then
 		if Humanoid.RigType == Enum.HumanoidRigType.R6 then
 			local Anim = Instance.new("StringValue")
@@ -151,7 +156,7 @@ function Lunge()
 				Track:Play(0)
 			end
 		end
-	end	
+	end
 	--[[
 	if CheckIfAlive() then
 		local Force = Instance.new("BodyVelocity")
@@ -161,7 +166,7 @@ function Lunge()
 		Force.Parent = Torso
 	end
 	]]
-	
+
 	wait(0.2)
 	Tool.Grip = Grips.Out
 	wait(0.6)
@@ -179,7 +184,7 @@ function Activated()
 	end
 	Tool.Enabled = false
 	local Tick = RunService.Stepped:wait()
-	if (Tick - LastAttack < 0.2) then
+	if Tick - LastAttack < 0.2 then
 		Lunge()
 	else
 		Attack()
@@ -187,22 +192,42 @@ function Activated()
 	LastAttack = Tick
 	--wait(0.5)
 	Damage = DamageValues.BaseDamage
-	local SlashAnim = (Tool:FindFirstChild("R15Slash") or Create("Animation"){
-		Name = "R15Slash",
-		AnimationId = BaseUrl .. Animations.R15Slash,
-		Parent = Tool
-	})
-	
-	local LungeAnim = (Tool:FindFirstChild("R15Lunge") or Create("Animation"){
-		Name = "R15Lunge",
-		AnimationId = BaseUrl .. Animations.R15Lunge,
-		Parent = Tool
-	})
+	local SlashAnim = (
+		Tool:FindFirstChild("R15Slash")
+		or Create("Animation")({
+			Name = "R15Slash",
+			AnimationId = BaseUrl .. Animations.R15Slash,
+			Parent = Tool,
+		})
+	)
+
+	local LungeAnim = (
+		Tool:FindFirstChild("R15Lunge")
+		or Create("Animation")({
+			Name = "R15Lunge",
+			AnimationId = BaseUrl .. Animations.R15Lunge,
+			Parent = Tool,
+		})
+	)
 	Tool.Enabled = true
 end
 
 function CheckIfAlive()
-	return (((Player and Player.Parent and Character and Character.Parent and Humanoid and Humanoid.Parent and Humanoid.Health > 0 and Torso and Torso.Parent) and true) or false)
+	return (
+		(
+			(
+				Player
+				and Player.Parent
+				and Character
+				and Character.Parent
+				and Humanoid
+				and Humanoid.Parent
+				and Humanoid.Health > 0
+				and Torso
+				and Torso.Parent
+			) and true
+		) or false
+	)
 end
 
 function Equipped()

@@ -23,6 +23,7 @@ local charactermanagermodule = require(rs.Shared.modules.CharacterManager)
 
 local function changeVisability(towhat)
 	towhat.Visible = not towhat.Visible
+	towhat.Interactable = not towhat.Interactable
 end
 local function charselectmoment(char, typeofplayer)
 	charselect:FireServer(typeofplayer, char)
@@ -37,10 +38,10 @@ rstart.OnClientEvent:Connect(function(idk1bro1dont1ask1me)
 	stateortime.state.Text = tostring(idk1bro1dont1ask1me)
 end)
 timeupdate.OnClientEvent:Connect(function(TimeToStart)
-	local countdown = math.round(TimeToStart-os.time())
+	local countdown = math.round(TimeToStart - os.time())
 	stateortime.time.Text = tostring(countdown)
-	
-	if countdown <= 3 then 
+
+	if countdown <= 3 then
 		countdownSFX:Play()
 	end
 end)
@@ -56,6 +57,4 @@ end)
 select3.MouseButton1Click:Connect(function()
 	charselectmoment("Killer1", "Killer")
 end)
-select4.MouseButton1Click:Connect(function()
-	
-end)
+select4.MouseButton1Click:Connect(function() end)
