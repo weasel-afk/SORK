@@ -9,7 +9,9 @@ function Maploader.loadMap(mapName)
 		MapClone.Parent = game.Workspace
 		local target = game.Workspace.MapPoint.CFrame
 		MapClone:PivotTo(target)
-		if not MapClone.RoundSpawn then return end
+		if not MapClone.RoundSpawn then
+			return
+		end
 		local roundspawn = MapClone.RoundSpawn
 		return roundspawn
 	end

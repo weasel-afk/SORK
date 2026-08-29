@@ -1,7 +1,7 @@
 local roundmanager = {}
 roundmanager.Status = 0
 local rs = game.ReplicatedStorage
-local ss = game.ServerStorage 
+local ss = game.ServerStorage
 local maps = ss.Maps:GetChildren()
 local re = rs.RE
 local RoundstartEvent = re.roundStart
@@ -35,7 +35,6 @@ function roundmanager.startRound()
 	end
 	return map
 end
-
 
 function roundmanager.stopRound(mapName)
 	roundmanager.Status = 0

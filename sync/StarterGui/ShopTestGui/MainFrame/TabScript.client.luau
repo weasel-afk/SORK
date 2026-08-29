@@ -10,7 +10,9 @@ for _, btn in ipairs(tabBar:GetChildren()) do -- Add tabs to array
 	end
 end
 
-table.sort(tabButtons, function(a, b) return a.LayoutOrder < b.LayoutOrder end)
+table.sort(tabButtons, function(a, b)
+	return a.LayoutOrder < b.LayoutOrder
+end)
 
 local tabContents = {}
 for _, content in ipairs(contentHolder:GetChildren()) do -- Get scrolling frames (These contain the content for different tabs)
@@ -35,9 +37,11 @@ end
 
 for index = 1, #tabButtons do
 	local capturedIndex = index
-	tabButtons[index].MouseButton1Click:Connect(function() -- Sets a MouseButton1Click listener for each tab, and on click will fire selectTab
-		selectTab(capturedIndex)
-	end)
+	tabButtons[index].MouseButton1Click:Connect(
+		function() -- Sets a MouseButton1Click listener for each tab, and on click will fire selectTab
+			selectTab(capturedIndex)
+		end
+	)
 end
 
 selectTab(1) -- Sets tab to first tab
@@ -49,7 +53,7 @@ local charactersTab = contentHolder:FindFirstChild("CharactersContent1")
 
 local oldCard = charactersTab:FindFirstChildOfClass("Frame")
 if oldCard then
-	oldCard:Destroy()-- Removes test tab to be filled in by other cards
+	oldCard:Destroy() -- Removes test tab to be filled in by other cards
 end
 
 for _, item in ipairs(shop.Items) do
@@ -115,21 +119,25 @@ for _, item in ipairs(shop.Items) do
 		buyItem:FireServer(item.Name)
 	end) -- Listen to buy button click
 
-	buyResult.OnClientEvent:Connect(function(boughtName, success, message) -- Make it so user knows what happened to their purchase
-		if boughtName ~= item.Name then return end
-		if success then
-			buyButton.Text = "Owned"
-			buyButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-			buyButton.Active = false
-		else
-			local original = buyButton.Text
-			buyButton.Text = message
-			task.wait(1.2)
-			if buyButton.Text == message then
-				buyButton.Text = original
+	buyResult.OnClientEvent:Connect(
+		function(boughtName, success, message) -- Make it so user knows what happened to their purchase
+			if boughtName ~= item.Name then
+				return
+			end
+			if success then
+				buyButton.Text = "Owned"
+				buyButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+				buyButton.Active = false
+			else
+				local original = buyButton.Text
+				buyButton.Text = message
+				task.wait(1.2)
+				if buyButton.Text == message then
+					buyButton.Text = original
+				end
 			end
 		end
-	end)
+	)
 end
 
 for _, content in ipairs(tabContents) do

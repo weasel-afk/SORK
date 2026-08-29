@@ -1,23 +1,34 @@
 local characterManager = {}
-characterManager.Survivers = {Char1 = {Name = "Noob", Health = 100, tools = "Soda"}, Char2 = {Name = "Pro", Health = 75, Passive = "Speed", Speed = 18}} -- char2 has no tools field, may cause issues
+characterManager.Survivers = {
+	Char1 = { Name = "Noob", Health = 100, tools = "Soda" },
+	Char2 = { Name = "Pro", Health = 75, Passive = "Speed", Speed = 18 },
+} -- char2 has no tools field, may cause issues
 -- I know it doesnt have a tool field. i bet ai told you about that.
-characterManager.Typesofplayers = {Surviver = characterManager.Survivers, Killer = nil}
-characterManager.Killers = {Killer1 = {Name = "Sword Man", Health = 500, tools = "ClassicSword"}}
-local shopManager =require(game.ReplicatedStorage.Shared.modules.ShopManager) 
+characterManager.Typesofplayers = { Surviver = characterManager.Survivers, Killer = nil }
+characterManager.Killers = { Killer1 = { Name = "Sword Man", Health = 500, tools = "ClassicSword" } }
+local shopManager = require(game.ReplicatedStorage.Shared.modules.ShopManager)
 characterManager.playerCharTable = {}
 characterManager.playerKillTable = {} -- This is the killer equvialnt of playerCharTable, so that both characters can be stored
 local tools = game.ReplicatedStorage.tools
 function characterManager.ChangeChar(SORK, selection, player) --SORK means survivers or killer
 	if SORK == "Surviver" then
 		local playerselection = characterManager.Survivers[selection]
-		if not playerselection then return end
-		if shopManager.DoesOwn(player, playerselection) ~= true then return
+		if not playerselection then
+			return
+		end
+		if shopManager.DoesOwn(player, playerselection) ~= true then
+			return
 		end
 		characterManager.playerCharTable[player.UserId] = playerselection
 	elseif SORK == "Killer" then
 		local playerselection = characterManager.Killers[selection]
-		if not playerselection then warn("nope :(") return end
-		if shopManager.DoesOwn(player, playerselection) ~= true then print("rin tin tin") return
+		if not playerselection then
+			warn("nope :(")
+			return
+		end
+		if shopManager.DoesOwn(player, playerselection) ~= true then
+			print("rin tin tin")
+			return
 		end
 		characterManager.playerKillTable[player.UserId] = playerselection
 	end
@@ -49,7 +60,7 @@ function characterManager.GetKillerNumber()
 			table.insert(killerUserIds, player.UserId)
 		end
 	end
-	
+
 	if #killerUserIds == 0 then
 		return nil
 	end
@@ -58,9 +69,13 @@ end
 
 local function tool(selection, player)
 	local toolselection = selection["tools"]
-	if not toolselection then return end
+	if not toolselection then
+		return
+	end
 	local clone = tools:FindFirstChild(toolselection)
-	if not clone then return end
+	if not clone then
+		return
+	end
 	local cloned = clone:Clone()
 	cloned.Parent = player.Backpack
 end
