@@ -5,6 +5,4 @@
 /*.rbxlx.lock
 /*.rbxl.lock
 
-sourcemap.json
-# Rojo related file
-aftman.toml
+/aiExport/
