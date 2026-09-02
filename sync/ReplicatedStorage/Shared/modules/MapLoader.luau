@@ -13,6 +13,7 @@ function Maploader.loadMap(mapName)
 			return
 		end
 		local roundspawn = MapClone.RoundSpawn
+		local killerSpawn = MapClone.KillerSpawn
 		return roundspawn
 	end
 	return false
