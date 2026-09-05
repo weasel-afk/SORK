@@ -107,6 +107,11 @@
               "name": "timeupdate",
               "className": "RemoteEvent",
               "guid": "12322"
+            },
+            {
+              "name": "PostProcessing",
+              "className": "RemoteEvent",
+              "guid": "2060282"
             }
           ]
         },
@@ -1379,7 +1384,17 @@
             {
               "name": "Client",
               "className": "Folder",
-              "guid": "12137"
+              "guid": "12137",
+              "children": [
+                {
+                  "name": "PostProcessing",
+                  "className": "LocalScript",
+                  "guid": "1429055",
+                  "filePaths": [
+                    "sync/StarterPlayer/StarterPlayerScripts/Client/PostProcessing.client.luau"
+                  ]
+                }
+              ]
             }
           ]
         }
