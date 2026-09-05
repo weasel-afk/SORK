@@ -5,37 +5,37 @@
     {
       "name": "Lighting",
       "className": "Lighting",
-      "guid": "12169",
+      "guid": "12170",
       "children": [
         {
           "name": "Atmosphere",
           "className": "Atmosphere",
-          "guid": "12038"
+          "guid": "12039"
         },
         {
           "name": "BL_Blur",
           "className": "BlurEffect",
-          "guid": "540327"
+          "guid": "546046"
         },
         {
           "name": "Bloom",
           "className": "BloomEffect",
-          "guid": "12114"
+          "guid": "12115"
         },
         {
           "name": "DepthOfField",
           "className": "DepthOfFieldEffect",
-          "guid": "12131"
+          "guid": "12132"
         },
         {
           "name": "Sky",
           "className": "Sky",
-          "guid": "12346"
+          "guid": "12347"
         },
         {
           "name": "SunRays",
           "className": "SunRaysEffect",
-          "guid": "12384"
+          "guid": "12385"
         }
       ]
     },
@@ -47,22 +47,22 @@
     {
       "name": "ReplicatedStorage",
       "className": "ReplicatedStorage",
-      "guid": "12325",
+      "guid": "12326",
       "children": [
         {
           "name": "misc",
           "className": "Folder",
-          "guid": "12140",
+          "guid": "12141",
           "children": [
             {
               "name": "Audio",
               "className": "Folder",
-              "guid": "12141",
+              "guid": "12142",
               "children": [
                 {
                   "name": "Countdown",
                   "className": "Sound",
-                  "guid": "12347"
+                  "guid": "12348"
                 }
               ]
             }
@@ -71,54 +71,54 @@
         {
           "name": "RE",
           "className": "Folder",
-          "guid": "12138",
+          "guid": "12139",
           "children": [
             {
               "name": "BuyItem",
               "className": "RemoteEvent",
-              "guid": "12323"
+              "guid": "12324"
             },
             {
               "name": "BuyResult",
               "className": "RemoteEvent",
-              "guid": "12324"
+              "guid": "12325"
             },
             {
               "name": "CharSelect",
               "className": "RemoteEvent",
-              "guid": "12320"
+              "guid": "12321"
             },
             {
               "name": "roundEnd",
               "className": "RemoteEvent",
-              "guid": "12319"
+              "guid": "12320"
             },
             {
               "name": "roundStart",
               "className": "RemoteEvent",
-              "guid": "12318"
+              "guid": "12319"
             },
             {
               "name": "ShopProximity",
               "className": "RemoteEvent",
-              "guid": "12322"
+              "guid": "12323"
             },
             {
               "name": "timeupdate",
               "className": "RemoteEvent",
-              "guid": "12321"
+              "guid": "12322"
             }
           ]
         },
         {
           "name": "RF",
           "className": "Folder",
-          "guid": "12139",
+          "guid": "12140",
           "children": [
             {
               "name": "hi",
               "className": "Script",
-              "guid": "12330",
+              "guid": "12331",
               "filePaths": [
                 "sync/ReplicatedStorage/RF/hi.server.luau"
               ]
@@ -128,17 +128,17 @@
         {
           "name": "Shared",
           "className": "Folder",
-          "guid": "12143",
+          "guid": "12144",
           "children": [
             {
               "name": "modules",
               "className": "Folder",
-              "guid": "12144",
+              "guid": "12145",
               "children": [
                 {
                   "name": "CharacterManager",
                   "className": "ModuleScript",
-                  "guid": "12237",
+                  "guid": "12238",
                   "filePaths": [
                     "sync/ReplicatedStorage/Shared/modules/CharacterManager.luau"
                   ]
@@ -146,7 +146,7 @@
                 {
                   "name": "MapLoader",
                   "className": "ModuleScript",
-                  "guid": "12241",
+                  "guid": "12242",
                   "filePaths": [
                     "sync/ReplicatedStorage/Shared/modules/MapLoader.luau"
                   ]
@@ -154,7 +154,7 @@
                 {
                   "name": "roundManager",
                   "className": "ModuleScript",
-                  "guid": "12238",
+                  "guid": "12239",
                   "filePaths": [
                     "sync/ReplicatedStorage/Shared/modules/roundManager.luau"
                   ]
@@ -162,7 +162,7 @@
                 {
                   "name": "ShopManager",
                   "className": "ModuleScript",
-                  "guid": "12240",
+                  "guid": "12241",
                   "filePaths": [
                     "sync/ReplicatedStorage/Shared/modules/ShopManager.luau"
                   ]
@@ -170,7 +170,7 @@
                 {
                   "name": "verify",
                   "className": "ModuleScript",
-                  "guid": "12239",
+                  "guid": "12240",
                   "filePaths": [
                     "sync/ReplicatedStorage/Shared/modules/verify.luau"
                   ]
@@ -182,44 +182,44 @@
         {
           "name": "tools",
           "className": "Folder",
-          "guid": "12142",
+          "guid": "12143",
           "children": [
             {
               "name": "ClassicSword",
               "className": "Tool",
-              "guid": "12409",
+              "guid": "12410",
               "children": [
                 {
                   "name": "Handle",
                   "className": "Part",
-                  "guid": "12289",
+                  "guid": "12290",
                   "children": [
                     {
                       "name": "Mesh",
                       "className": "SpecialMesh",
-                      "guid": "12353"
+                      "guid": "12354"
                     },
                     {
                       "name": "SwordLunge",
                       "className": "Sound",
-                      "guid": "12349"
+                      "guid": "12350"
                     },
                     {
                       "name": "SwordSlash",
                       "className": "Sound",
-                      "guid": "12348"
+                      "guid": "12349"
                     },
                     {
                       "name": "Unsheath",
                       "className": "Sound",
-                      "guid": "12350"
+                      "guid": "12351"
                     }
                   ]
                 },
                 {
                   "name": "MouseIcon",
                   "className": "LocalScript",
-                  "guid": "12175",
+                  "guid": "12176",
                   "filePaths": [
                     "sync/ReplicatedStorage/tools/ClassicSword/MouseIcon.client.luau"
                   ]
@@ -227,7 +227,7 @@
                 {
                   "name": "SwordScript",
                   "className": "Script",
-                  "guid": "12332",
+                  "guid": "12333",
                   "filePaths": [
                     "sync/ReplicatedStorage/tools/ClassicSword/SwordScript.server.luau"
                   ]
@@ -237,17 +237,17 @@
             {
               "name": "Soda",
               "className": "Tool",
-              "guid": "12408",
+              "guid": "12409",
               "children": [
                 {
                   "name": "Handle",
                   "className": "Part",
-                  "guid": "12288"
+                  "guid": "12289"
                 },
                 {
                   "name": "Script",
                   "className": "Script",
-                  "guid": "12331",
+                  "guid": "12332",
                   "filePaths": [
                     "sync/ReplicatedStorage/tools/Soda/Script.server.luau"
                   ]
@@ -261,22 +261,22 @@
     {
       "name": "ServerScriptService",
       "className": "ServerScriptService",
-      "guid": "12343",
+      "guid": "12344",
       "children": [
         {
           "name": "module",
           "className": "Folder",
-          "guid": "12145"
+          "guid": "12146"
         },
         {
           "name": "Server",
           "className": "Folder",
-          "guid": "12146",
+          "guid": "12147",
           "children": [
             {
               "name": "CoinPads",
               "className": "Script",
-              "guid": "12336",
+              "guid": "12337",
               "filePaths": [
                 "sync/ServerScriptService/Server/CoinPads.server.luau"
               ]
@@ -284,7 +284,7 @@
             {
               "name": "dataservih",
               "className": "Script",
-              "guid": "12335",
+              "guid": "12336",
               "filePaths": [
                 "sync/ServerScriptService/Server/dataservih.server.luau"
               ]
@@ -292,7 +292,7 @@
             {
               "name": "main",
               "className": "Script",
-              "guid": "12333",
+              "guid": "12334",
               "filePaths": [
                 "sync/ServerScriptService/Server/main.server.luau"
               ]
@@ -300,7 +300,7 @@
             {
               "name": "shapserver",
               "className": "Script",
-              "guid": "12334",
+              "guid": "12335",
               "filePaths": [
                 "sync/ServerScriptService/Server/shapserver.server.luau"
               ]
@@ -312,42 +312,37 @@
     {
       "name": "ServerStorage",
       "className": "ServerStorage",
-      "guid": "12344",
+      "guid": "12345",
       "children": [
         {
           "name": "BlockLuaScripts",
           "className": "Folder",
-          "guid": "12147"
+          "guid": "12148"
         },
         {
           "name": "Brushtool2_Plugin_Storage",
           "className": "Folder",
-          "guid": "12148",
+          "guid": "12149",
           "children": [
             {
               "name": "3188700654_BrushtoolBrushObjects",
               "className": "Folder",
-              "guid": "12149",
+              "guid": "12150",
               "children": [
                 {
                   "name": "{1c07e126-c34d-4c16-8790-8367b61c71d4}",
                   "className": "Folder",
-                  "guid": "12150",
+                  "guid": "12151",
                   "children": [
                     {
                       "name": "Tree",
                       "className": "Model",
-                      "guid": "12231",
+                      "guid": "12232",
                       "children": [
                         {
                           "name": "Bark",
                           "className": "MeshPart",
-                          "guid": "12195"
-                        },
-                        {
-                          "name": "Leaves",
-                          "className": "MeshPart",
-                          "guid": "12191"
+                          "guid": "12196"
                         },
                         {
                           "name": "Leaves",
@@ -367,7 +362,7 @@
                         {
                           "name": "Leaves",
                           "className": "MeshPart",
-                          "guid": "12196"
+                          "guid": "12195"
                         },
                         {
                           "name": "Leaves",
@@ -518,6 +513,11 @@
                           "name": "Leaves",
                           "className": "MeshPart",
                           "guid": "12226"
+                        },
+                        {
+                          "name": "Leaves",
+                          "className": "MeshPart",
+                          "guid": "12227"
                         }
                       ]
                     }
@@ -528,22 +528,10 @@
             {
               "name": "3188700654_BrushtoolReferences",
               "className": "Folder",
-              "guid": "12153",
+              "guid": "12154",
               "children": [
                 {
                   "name": "brushedParent",
-                  "className": "Folder",
-                  "guid": "12154",
-                  "children": [
-                    {
-                      "name": "Value",
-                      "className": "ObjectValue",
-                      "guid": "12280"
-                    }
-                  ]
-                },
-                {
-                  "name": "stampedParent",
                   "className": "Folder",
                   "guid": "12155",
                   "children": [
@@ -553,43 +541,50 @@
                       "guid": "12281"
                     }
                   ]
+                },
+                {
+                  "name": "stampedParent",
+                  "className": "Folder",
+                  "guid": "12156",
+                  "children": [
+                    {
+                      "name": "Value",
+                      "className": "ObjectValue",
+                      "guid": "12282"
+                    }
+                  ]
                 }
               ]
             },
             {
               "name": "3188700654_BrushtoolStampObjects",
               "className": "Folder",
-              "guid": "12151",
+              "guid": "12152",
               "children": [
                 {
                   "name": "{EA0887D3-1F39-4F5C-88E9-9C2341526468}",
                   "className": "Folder",
-                  "guid": "12152",
+                  "guid": "12153",
                   "children": [
                     {
                       "name": "CanopyTent",
                       "className": "Model",
-                      "guid": "12232",
+                      "guid": "12233",
                       "children": [
                         {
                           "name": "Base",
                           "className": "Part",
-                          "guid": "12297"
+                          "guid": "12298"
                         },
                         {
                           "name": "Collider",
                           "className": "Model",
-                          "guid": "12234",
+                          "guid": "12235",
                           "children": [
                             {
                               "name": "Canopy",
                               "className": "MeshPart",
-                              "guid": "12227"
-                            },
-                            {
-                              "name": "Part",
-                              "className": "Part",
-                              "guid": "12292"
+                              "guid": "12228"
                             },
                             {
                               "name": "Part",
@@ -610,16 +605,33 @@
                               "name": "Part",
                               "className": "Part",
                               "guid": "12296"
+                            },
+                            {
+                              "name": "Part",
+                              "className": "Part",
+                              "guid": "12297"
                             }
                           ]
                         },
                         {
                           "name": "Visual",
                           "className": "Model",
-                          "guid": "12233",
+                          "guid": "12234",
                           "children": [
                             {
                               "name": "Canopy",
+                              "className": "Part",
+                              "guid": "12292",
+                              "children": [
+                                {
+                                  "name": "Mesh",
+                                  "className": "SpecialMesh",
+                                  "guid": "12356"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Legs",
                               "className": "Part",
                               "guid": "12291",
                               "children": [
@@ -627,18 +639,6 @@
                                   "name": "Mesh",
                                   "className": "SpecialMesh",
                                   "guid": "12355"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Legs",
-                              "className": "Part",
-                              "guid": "12290",
-                              "children": [
-                                {
-                                  "name": "Mesh",
-                                  "className": "SpecialMesh",
-                                  "guid": "12354"
                                 }
                               ]
                             }
@@ -653,32 +653,32 @@
             {
               "name": "3188700654_BrushtoolTable",
               "className": "Folder",
-              "guid": "12156",
+              "guid": "12157",
               "children": [
                 {
                   "name": "brush",
                   "className": "StringValue",
-                  "guid": "12379"
+                  "guid": "12380"
                 },
                 {
                   "name": "brushObjects",
                   "className": "StringValue",
-                  "guid": "12380"
+                  "guid": "12381"
                 },
                 {
                   "name": "erase",
                   "className": "StringValue",
-                  "guid": "12383"
+                  "guid": "12384"
                 },
                 {
                   "name": "stamp",
                   "className": "StringValue",
-                  "guid": "12381"
+                  "guid": "12382"
                 },
                 {
                   "name": "stampObjects",
                   "className": "StringValue",
-                  "guid": "12382"
+                  "guid": "12383"
                 }
               ]
             }
@@ -687,17 +687,17 @@
         {
           "name": "door",
           "className": "Model",
-          "guid": "12235",
+          "guid": "12236",
           "children": [
             {
               "name": "door",
               "className": "Part",
-              "guid": "12298",
+              "guid": "12299",
               "children": [
                 {
                   "name": "ToggleDoor",
                   "className": "Script",
-                  "guid": "12337",
+                  "guid": "12338",
                   "filePaths": [
                     "sync/ServerStorage/door/door/ToggleDoor.server.luau"
                   ]
@@ -709,22 +709,133 @@
         {
           "name": "Maps",
           "className": "Folder",
-          "guid": "12157",
+          "guid": "12158",
           "children": [
             {
               "name": "map",
               "className": "Model",
-              "guid": "12236",
+              "guid": "12237",
               "children": [
+                {
+                  "name": "dog house",
+                  "className": "Model",
+                  "guid": "562182",
+                  "children": [
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "561367"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "565718"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "567782"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "568238"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "571485"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "573493"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "586330"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598610"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598615"
+                    }
+                  ]
+                },
+                {
+                  "name": "house",
+                  "className": "Model",
+                  "guid": "598609",
+                  "children": [
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598611"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598612"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598613"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598614"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "598616"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "602423"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "610860"
+                    },
+                    {
+                      "name": "Part",
+                      "className": "Part",
+                      "guid": "611261"
+                    }
+                  ]
+                },
                 {
                   "name": "KillerSpawn",
                   "className": "Part",
-                  "guid": "12311"
+                  "guid": "12312"
                 },
                 {
-                  "name": "Part",
-                  "className": "Part",
-                  "guid": "12299"
+                  "name": "Model",
+                  "className": "Model",
+                  "guid": "550664",
+                  "children": [
+                    {
+                      "name": "Union",
+                      "className": "UnionOperation",
+                      "guid": "550666"
+                    },
+                    {
+                      "name": "Union",
+                      "className": "UnionOperation",
+                      "guid": "550667"
+                    }
+                  ]
                 },
                 {
                   "name": "Part",
@@ -779,7 +890,7 @@
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12312"
+                  "guid": "12310"
                 },
                 {
                   "name": "Part",
@@ -797,29 +908,26 @@
                   "guid": "12315"
                 },
                 {
-                  "name": "RoundSpawn",
+                  "name": "Part",
                   "className": "Part",
                   "guid": "12316"
                 },
                 {
-                  "name": "Verity",
+                  "name": "Part",
                   "className": "Part",
-                  "guid": "12310",
+                  "guid": "553294",
                   "children": [
                     {
-                      "name": "Decal",
-                      "className": "Decal",
-                      "guid": "12130"
-                    },
-                    {
-                      "name": "Script",
-                      "className": "Script",
-                      "guid": "12338",
-                      "filePaths": [
-                        "sync/ServerStorage/Maps/map/Verity/Script.server.luau"
-                      ]
+                      "name": "Fire",
+                      "className": "Fire",
+                      "guid": "555439"
                     }
                   ]
+                },
+                {
+                  "name": "RoundSpawn",
+                  "className": "Part",
+                  "guid": "12317"
                 }
               ]
             }
@@ -830,7 +938,7 @@
     {
       "name": "SoundService",
       "className": "SoundService",
-      "guid": "8253"
+      "guid": "8281"
     },
     {
       "name": "StarterGui",
@@ -840,27 +948,15 @@
         {
           "name": "MainGui",
           "className": "ScreenGui",
-          "guid": "12326",
+          "guid": "12327",
           "children": [
             {
               "name": "charFrame",
               "className": "Frame",
-              "guid": "12159",
+              "guid": "12160",
               "children": [
                 {
                   "name": "Select1",
-                  "className": "TextButton",
-                  "guid": "12390",
-                  "children": [
-                    {
-                      "name": "UICorner",
-                      "className": "UICorner",
-                      "guid": "12414"
-                    }
-                  ]
-                },
-                {
-                  "name": "Select2",
                   "className": "TextButton",
                   "guid": "12391",
                   "children": [
@@ -872,19 +968,19 @@
                   ]
                 },
                 {
-                  "name": "Select3",
+                  "name": "Select2",
                   "className": "TextButton",
                   "guid": "12392",
                   "children": [
                     {
                       "name": "UICorner",
                       "className": "UICorner",
-                      "guid": "12418"
+                      "guid": "12416"
                     }
                   ]
                 },
                 {
-                  "name": "Select4",
+                  "name": "Select3",
                   "className": "TextButton",
                   "guid": "12393",
                   "children": [
@@ -896,21 +992,28 @@
                   ]
                 },
                 {
-                  "name": "TextLabel",
-                  "className": "TextLabel",
-                  "guid": "12403",
+                  "name": "Select4",
+                  "className": "TextButton",
+                  "guid": "12394",
                   "children": [
                     {
                       "name": "UICorner",
                       "className": "UICorner",
-                      "guid": "12413"
+                      "guid": "12420"
                     }
                   ]
                 },
                 {
-                  "name": "UICorner",
-                  "className": "UICorner",
-                  "guid": "12416"
+                  "name": "TextLabel",
+                  "className": "TextLabel",
+                  "guid": "12404",
+                  "children": [
+                    {
+                      "name": "UICorner",
+                      "className": "UICorner",
+                      "guid": "12414"
+                    }
+                  ]
                 },
                 {
                   "name": "UICorner",
@@ -918,9 +1021,41 @@
                   "guid": "12417"
                 },
                 {
+                  "name": "UICorner",
+                  "className": "UICorner",
+                  "guid": "12418"
+                },
+                {
                   "name": "UIGradient",
                   "className": "UIGradient",
-                  "guid": "12434"
+                  "guid": "12435"
+                },
+                {
+                  "name": "UIShadow",
+                  "className": "UIShadow",
+                  "guid": "12447"
+                }
+              ]
+            },
+            {
+              "name": "infoframe",
+              "className": "Frame",
+              "guid": "12159",
+              "children": [
+                {
+                  "name": "state",
+                  "className": "TextLabel",
+                  "guid": "12403"
+                },
+                {
+                  "name": "time",
+                  "className": "TextLabel",
+                  "guid": "12402"
+                },
+                {
+                  "name": "UICorner",
+                  "className": "UICorner",
+                  "guid": "12413"
                 },
                 {
                   "name": "UIShadow",
@@ -930,41 +1065,14 @@
               ]
             },
             {
-              "name": "infoframe",
-              "className": "Frame",
-              "guid": "12158",
-              "children": [
-                {
-                  "name": "state",
-                  "className": "TextLabel",
-                  "guid": "12402"
-                },
-                {
-                  "name": "time",
-                  "className": "TextLabel",
-                  "guid": "12401"
-                },
-                {
-                  "name": "UICorner",
-                  "className": "UICorner",
-                  "guid": "12412"
-                },
-                {
-                  "name": "UIShadow",
-                  "className": "UIShadow",
-                  "guid": "12445"
-                }
-              ]
-            },
-            {
               "name": "script",
               "className": "Folder",
-              "guid": "12137",
+              "guid": "12138",
               "children": [
                 {
                   "name": "clientgui",
                   "className": "LocalScript",
-                  "guid": "12171",
+                  "guid": "12172",
                   "filePaths": [
                     "sync/StarterGui/MainGui/script/clientgui.client.luau"
                   ]
@@ -974,10 +1082,27 @@
             {
               "name": "showframe",
               "className": "Frame",
-              "guid": "12160",
+              "guid": "12161",
               "children": [
                 {
                   "name": "button1",
+                  "className": "TextButton",
+                  "guid": "12396",
+                  "children": [
+                    {
+                      "name": "UICorner",
+                      "className": "UICorner",
+                      "guid": "12423"
+                    },
+                    {
+                      "name": "UIGradient",
+                      "className": "UIGradient",
+                      "guid": "12437"
+                    }
+                  ]
+                },
+                {
+                  "name": "button2",
                   "className": "TextButton",
                   "guid": "12395",
                   "children": [
@@ -994,31 +1119,14 @@
                   ]
                 },
                 {
-                  "name": "button2",
-                  "className": "TextButton",
-                  "guid": "12394",
-                  "children": [
-                    {
-                      "name": "UICorner",
-                      "className": "UICorner",
-                      "guid": "12421"
-                    },
-                    {
-                      "name": "UIGradient",
-                      "className": "UIGradient",
-                      "guid": "12435"
-                    }
-                  ]
-                },
-                {
                   "name": "UICorner",
                   "className": "UICorner",
-                  "guid": "12420"
+                  "guid": "12421"
                 },
                 {
                   "name": "UIShadow",
                   "className": "UIShadow",
-                  "guid": "12447"
+                  "guid": "12448"
                 }
               ]
             }
@@ -1027,22 +1135,22 @@
         {
           "name": "ShopTestGui",
           "className": "ScreenGui",
-          "guid": "12327",
+          "guid": "12328",
           "children": [
             {
               "name": "MainFrame",
               "className": "Frame",
-              "guid": "12161",
+              "guid": "12162",
               "children": [
                 {
                   "name": "CoinsLabel",
                   "className": "TextLabel",
-                  "guid": "12407",
+                  "guid": "12408",
                   "children": [
                     {
                       "name": "CoinsDisplayScript",
                       "className": "LocalScript",
-                      "guid": "12173",
+                      "guid": "12174",
                       "filePaths": [
                         "sync/StarterGui/ShopTestGui/MainFrame/CoinsLabel/CoinsDisplayScript.client.luau"
                       ]
@@ -1052,30 +1160,18 @@
                 {
                   "name": "ContentHolder",
                   "className": "Frame",
-                  "guid": "12163",
+                  "guid": "12164",
                   "children": [
                     {
                       "name": "CharactersContent1",
                       "className": "ScrollingFrame",
-                      "guid": "12339",
+                      "guid": "12340",
                       "children": [
                         {
                           "name": "Frame",
                           "className": "Frame",
-                          "guid": "12164",
+                          "guid": "12165",
                           "children": [
-                            {
-                              "name": "TextButton",
-                              "className": "TextButton",
-                              "guid": "12399",
-                              "children": [
-                                {
-                                  "name": "UICorner",
-                                  "className": "UICorner",
-                                  "guid": "12429"
-                                }
-                              ]
-                            },
                             {
                               "name": "TextButton",
                               "className": "TextButton",
@@ -1089,9 +1185,16 @@
                               ]
                             },
                             {
-                              "name": "TextLabel",
-                              "className": "TextLabel",
-                              "guid": "12405"
+                              "name": "TextButton",
+                              "className": "TextButton",
+                              "guid": "12401",
+                              "children": [
+                                {
+                                  "name": "UICorner",
+                                  "className": "UICorner",
+                                  "guid": "12431"
+                                }
+                              ]
                             },
                             {
                               "name": "TextLabel",
@@ -1099,43 +1202,26 @@
                               "guid": "12406"
                             },
                             {
+                              "name": "TextLabel",
+                              "className": "TextLabel",
+                              "guid": "12407"
+                            },
+                            {
                               "name": "UICorner",
                               "className": "UICorner",
-                              "guid": "12428"
+                              "guid": "12429"
                             }
                           ]
                         },
                         {
                           "name": "UICorner",
                           "className": "UICorner",
-                          "guid": "12427"
+                          "guid": "12428"
                         },
                         {
                           "name": "UIGridLayout",
                           "className": "UIGridLayout",
-                          "guid": "12437"
-                        },
-                        {
-                          "name": "UIPadding",
-                          "className": "UIPadding",
-                          "guid": "12442"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "TestContent2",
-                      "className": "ScrollingFrame",
-                      "guid": "12340",
-                      "children": [
-                        {
-                          "name": "UICorner",
-                          "className": "UICorner",
-                          "guid": "12431"
-                        },
-                        {
-                          "name": "UIListLayout",
-                          "className": "UIListLayout",
-                          "guid": "12439"
+                          "guid": "12438"
                         },
                         {
                           "name": "UIPadding",
@@ -1145,7 +1231,7 @@
                       ]
                     },
                     {
-                      "name": "TestContent3",
+                      "name": "TestContent2",
                       "className": "ScrollingFrame",
                       "guid": "12341",
                       "children": [
@@ -1165,28 +1251,38 @@
                           "guid": "12444"
                         }
                       ]
+                    },
+                    {
+                      "name": "TestContent3",
+                      "className": "ScrollingFrame",
+                      "guid": "12342",
+                      "children": [
+                        {
+                          "name": "UICorner",
+                          "className": "UICorner",
+                          "guid": "12433"
+                        },
+                        {
+                          "name": "UIListLayout",
+                          "className": "UIListLayout",
+                          "guid": "12441"
+                        },
+                        {
+                          "name": "UIPadding",
+                          "className": "UIPadding",
+                          "guid": "12445"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "name": "TabBar",
                   "className": "Frame",
-                  "guid": "12162",
+                  "guid": "12163",
                   "children": [
                     {
                       "name": "Tab_Characters_1",
-                      "className": "TextButton",
-                      "guid": "12396",
-                      "children": [
-                        {
-                          "name": "UICorner",
-                          "className": "UICorner",
-                          "guid": "12424"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Tab_Test_2",
                       "className": "TextButton",
                       "guid": "12397",
                       "children": [
@@ -1198,7 +1294,7 @@
                       ]
                     },
                     {
-                      "name": "Tab_Test_3",
+                      "name": "Tab_Test_2",
                       "className": "TextButton",
                       "guid": "12398",
                       "children": [
@@ -1210,16 +1306,28 @@
                       ]
                     },
                     {
+                      "name": "Tab_Test_3",
+                      "className": "TextButton",
+                      "guid": "12399",
+                      "children": [
+                        {
+                          "name": "UICorner",
+                          "className": "UICorner",
+                          "guid": "12427"
+                        }
+                      ]
+                    },
+                    {
                       "name": "UIListLayout",
                       "className": "UIListLayout",
-                      "guid": "12438"
+                      "guid": "12439"
                     }
                   ]
                 },
                 {
                   "name": "TabScript",
                   "className": "LocalScript",
-                  "guid": "12172",
+                  "guid": "12173",
                   "filePaths": [
                     "sync/StarterGui/ShopTestGui/MainFrame/TabScript.client.luau"
                   ]
@@ -1227,19 +1335,19 @@
                 {
                   "name": "TextLabel",
                   "className": "TextLabel",
-                  "guid": "12404"
+                  "guid": "12405"
                 },
                 {
                   "name": "UICorner",
                   "className": "UICorner",
-                  "guid": "12423"
+                  "guid": "12424"
                 }
               ]
             },
             {
               "name": "OpenCloseScript",
               "className": "LocalScript",
-              "guid": "12174",
+              "guid": "12175",
               "filePaths": [
                 "sync/StarterGui/ShopTestGui/OpenCloseScript.client.luau"
               ]
@@ -1261,17 +1369,17 @@
         {
           "name": "StarterCharacterScripts",
           "className": "StarterCharacterScripts",
-          "guid": "12356"
+          "guid": "12357"
         },
         {
           "name": "StarterPlayerScripts",
           "className": "StarterPlayerScripts",
-          "guid": "12357",
+          "guid": "12358",
           "children": [
             {
               "name": "Client",
               "className": "Folder",
-              "guid": "12136"
+              "guid": "12137"
             }
           ]
         }
@@ -1285,32 +1393,32 @@
         {
           "name": "Camera",
           "className": "Camera",
-          "guid": "214673"
+          "guid": "203908"
         },
         {
           "name": "Lobby",
           "className": "Model",
-          "guid": "12228",
+          "guid": "12229",
           "children": [
             {
               "name": "cool",
               "className": "Part",
-              "guid": "12282",
+              "guid": "12283",
               "children": [
                 {
                   "name": "Decal",
                   "className": "Decal",
-                  "guid": "12129"
+                  "guid": "12130"
                 },
                 {
                   "name": "Mesh",
                   "className": "SpecialMesh",
-                  "guid": "12352"
+                  "guid": "12353"
                 },
                 {
                   "name": "Script",
                   "className": "Script",
-                  "guid": "12328",
+                  "guid": "12329",
                   "filePaths": [
                     "sync/Workspace/Lobby/cool/Script.server.luau"
                   ]
@@ -1320,29 +1428,29 @@
             {
               "name": "Part",
               "className": "Part",
-              "guid": "12283"
+              "guid": "12284"
             },
             {
               "name": "SpawnLocation",
               "className": "SpawnLocation",
-              "guid": "12351"
+              "guid": "12352"
             }
           ]
         },
         {
           "name": "MapPoint",
           "className": "Part",
-          "guid": "12284"
+          "guid": "12285"
         },
         {
           "name": "npc shop",
           "className": "Model",
-          "guid": "12229",
+          "guid": "12230",
           "children": [
             {
               "name": "Animate",
               "className": "LocalScript",
-              "guid": "12170",
+              "guid": "12171",
               "filePaths": [
                 "sync/Workspace/npc shop/Animate.client.luau"
               ],
@@ -1350,34 +1458,46 @@
                 {
                   "name": "cheer",
                   "className": "StringValue",
-                  "guid": "12372",
+                  "guid": "12373",
                   "children": [
                     {
                       "name": "CheerAnim",
                       "className": "Animation",
-                      "guid": "12015"
+                      "guid": "12016"
                     }
                   ]
                 },
                 {
                   "name": "climb",
                   "className": "StringValue",
-                  "guid": "12368",
+                  "guid": "12369",
                   "children": [
                     {
                       "name": "ClimbAnim",
                       "className": "Animation",
-                      "guid": "12011"
+                      "guid": "12012"
                     }
                   ]
                 },
                 {
                   "name": "dance",
                   "className": "StringValue",
-                  "guid": "12364",
+                  "guid": "12365",
                   "children": [
                     {
                       "name": "Animation1",
+                      "className": "Animation",
+                      "guid": "12008",
+                      "children": [
+                        {
+                          "name": "Weight",
+                          "className": "NumberValue",
+                          "guid": "12278"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Animation2",
                       "className": "Animation",
                       "guid": "12007",
                       "children": [
@@ -1389,7 +1509,7 @@
                       ]
                     },
                     {
-                      "name": "Animation2",
+                      "name": "Animation3",
                       "className": "Animation",
                       "guid": "12006",
                       "children": [
@@ -1399,52 +1519,16 @@
                           "guid": "12276"
                         }
                       ]
-                    },
-                    {
-                      "name": "Animation3",
-                      "className": "Animation",
-                      "guid": "12005",
-                      "children": [
-                        {
-                          "name": "Weight",
-                          "className": "NumberValue",
-                          "guid": "12275"
-                        }
-                      ]
                     }
                   ]
                 },
                 {
                   "name": "dance2",
                   "className": "StringValue",
-                  "guid": "12362",
+                  "guid": "12363",
                   "children": [
                     {
                       "name": "Animation1",
-                      "className": "Animation",
-                      "guid": "12001",
-                      "children": [
-                        {
-                          "name": "Weight",
-                          "className": "NumberValue",
-                          "guid": "12271"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Animation2",
-                      "className": "Animation",
-                      "guid": "12003",
-                      "children": [
-                        {
-                          "name": "Weight",
-                          "className": "NumberValue",
-                          "guid": "12273"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Animation3",
                       "className": "Animation",
                       "guid": "12002",
                       "children": [
@@ -1454,28 +1538,40 @@
                           "guid": "12272"
                         }
                       ]
+                    },
+                    {
+                      "name": "Animation2",
+                      "className": "Animation",
+                      "guid": "12004",
+                      "children": [
+                        {
+                          "name": "Weight",
+                          "className": "NumberValue",
+                          "guid": "12274"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Animation3",
+                      "className": "Animation",
+                      "guid": "12003",
+                      "children": [
+                        {
+                          "name": "Weight",
+                          "className": "NumberValue",
+                          "guid": "12273"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "name": "dance3",
                   "className": "StringValue",
-                  "guid": "12361",
+                  "guid": "12362",
                   "children": [
                     {
                       "name": "Animation1",
-                      "className": "Animation",
-                      "guid": "11998",
-                      "children": [
-                        {
-                          "name": "Weight",
-                          "className": "NumberValue",
-                          "guid": "12268"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Animation2",
                       "className": "Animation",
                       "guid": "11999",
                       "children": [
@@ -1487,7 +1583,7 @@
                       ]
                     },
                     {
-                      "name": "Animation3",
+                      "name": "Animation2",
                       "className": "Animation",
                       "guid": "12000",
                       "children": [
@@ -1497,28 +1593,52 @@
                           "guid": "12270"
                         }
                       ]
+                    },
+                    {
+                      "name": "Animation3",
+                      "className": "Animation",
+                      "guid": "12001",
+                      "children": [
+                        {
+                          "name": "Weight",
+                          "className": "NumberValue",
+                          "guid": "12271"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "name": "fall",
                   "className": "StringValue",
-                  "guid": "12359",
+                  "guid": "12360",
                   "children": [
                     {
                       "name": "FallAnim",
                       "className": "Animation",
-                      "guid": "11996"
+                      "guid": "11997"
                     }
                   ]
                 },
                 {
                   "name": "idle",
                   "className": "StringValue",
-                  "guid": "12377",
+                  "guid": "12378",
                   "children": [
                     {
                       "name": "Animation1",
+                      "className": "Animation",
+                      "guid": "12022",
+                      "children": [
+                        {
+                          "name": "Weight",
+                          "className": "NumberValue",
+                          "guid": "12280"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Animation2",
                       "className": "Animation",
                       "guid": "12021",
                       "children": [
@@ -1528,184 +1648,172 @@
                           "guid": "12279"
                         }
                       ]
-                    },
-                    {
-                      "name": "Animation2",
-                      "className": "Animation",
-                      "guid": "12020",
-                      "children": [
-                        {
-                          "name": "Weight",
-                          "className": "NumberValue",
-                          "guid": "12278"
-                        }
-                      ]
                     }
                   ]
                 },
                 {
                   "name": "jump",
                   "className": "StringValue",
-                  "guid": "12373",
-                  "children": [
-                    {
-                      "name": "JumpAnim",
-                      "className": "Animation",
-                      "guid": "12016"
-                    }
-                  ]
-                },
-                {
-                  "name": "laugh",
-                  "className": "StringValue",
-                  "guid": "12369",
-                  "children": [
-                    {
-                      "name": "LaughAnim",
-                      "className": "Animation",
-                      "guid": "12012"
-                    }
-                  ]
-                },
-                {
-                  "name": "mood",
-                  "className": "StringValue",
-                  "guid": "12366",
-                  "children": [
-                    {
-                      "name": "Animation1",
-                      "className": "Animation",
-                      "guid": "12009"
-                    }
-                  ]
-                },
-                {
-                  "name": "PlayEmote",
-                  "className": "BindableFunction",
-                  "guid": "12113"
-                },
-                {
-                  "name": "point",
-                  "className": "StringValue",
-                  "guid": "12371",
-                  "children": [
-                    {
-                      "name": "PointAnim",
-                      "className": "Animation",
-                      "guid": "12014"
-                    }
-                  ]
-                },
-                {
-                  "name": "run",
-                  "className": "StringValue",
-                  "guid": "12376",
-                  "children": [
-                    {
-                      "name": "RunAnim",
-                      "className": "Animation",
-                      "guid": "12019"
-                    }
-                  ]
-                },
-                {
-                  "name": "ScaleDampeningPercent",
-                  "className": "NumberValue",
-                  "guid": "12274"
-                },
-                {
-                  "name": "sit",
-                  "className": "StringValue",
-                  "guid": "12367",
-                  "children": [
-                    {
-                      "name": "SitAnim",
-                      "className": "Animation",
-                      "guid": "12010"
-                    }
-                  ]
-                },
-                {
-                  "name": "swim",
-                  "className": "StringValue",
                   "guid": "12374",
                   "children": [
                     {
-                      "name": "Swim",
+                      "name": "JumpAnim",
                       "className": "Animation",
                       "guid": "12017"
                     }
                   ]
                 },
                 {
-                  "name": "swimidle",
-                  "className": "StringValue",
-                  "guid": "12375",
-                  "children": [
-                    {
-                      "name": "SwimIdle",
-                      "className": "Animation",
-                      "guid": "12018"
-                    }
-                  ]
-                },
-                {
-                  "name": "toollunge",
-                  "className": "StringValue",
-                  "guid": "12365",
-                  "children": [
-                    {
-                      "name": "ToolLungeAnim",
-                      "className": "Animation",
-                      "guid": "12008"
-                    }
-                  ]
-                },
-                {
-                  "name": "toolnone",
-                  "className": "StringValue",
-                  "guid": "12363",
-                  "children": [
-                    {
-                      "name": "ToolNoneAnim",
-                      "className": "Animation",
-                      "guid": "12004"
-                    }
-                  ]
-                },
-                {
-                  "name": "toolslash",
-                  "className": "StringValue",
-                  "guid": "12360",
-                  "children": [
-                    {
-                      "name": "ToolSlashAnim",
-                      "className": "Animation",
-                      "guid": "11997"
-                    }
-                  ]
-                },
-                {
-                  "name": "walk",
+                  "name": "laugh",
                   "className": "StringValue",
                   "guid": "12370",
                   "children": [
                     {
-                      "name": "WalkAnim",
+                      "name": "LaughAnim",
                       "className": "Animation",
                       "guid": "12013"
                     }
                   ]
                 },
                 {
+                  "name": "mood",
+                  "className": "StringValue",
+                  "guid": "12367",
+                  "children": [
+                    {
+                      "name": "Animation1",
+                      "className": "Animation",
+                      "guid": "12010"
+                    }
+                  ]
+                },
+                {
+                  "name": "PlayEmote",
+                  "className": "BindableFunction",
+                  "guid": "12114"
+                },
+                {
+                  "name": "point",
+                  "className": "StringValue",
+                  "guid": "12372",
+                  "children": [
+                    {
+                      "name": "PointAnim",
+                      "className": "Animation",
+                      "guid": "12015"
+                    }
+                  ]
+                },
+                {
+                  "name": "run",
+                  "className": "StringValue",
+                  "guid": "12377",
+                  "children": [
+                    {
+                      "name": "RunAnim",
+                      "className": "Animation",
+                      "guid": "12020"
+                    }
+                  ]
+                },
+                {
+                  "name": "ScaleDampeningPercent",
+                  "className": "NumberValue",
+                  "guid": "12275"
+                },
+                {
+                  "name": "sit",
+                  "className": "StringValue",
+                  "guid": "12368",
+                  "children": [
+                    {
+                      "name": "SitAnim",
+                      "className": "Animation",
+                      "guid": "12011"
+                    }
+                  ]
+                },
+                {
+                  "name": "swim",
+                  "className": "StringValue",
+                  "guid": "12375",
+                  "children": [
+                    {
+                      "name": "Swim",
+                      "className": "Animation",
+                      "guid": "12018"
+                    }
+                  ]
+                },
+                {
+                  "name": "swimidle",
+                  "className": "StringValue",
+                  "guid": "12376",
+                  "children": [
+                    {
+                      "name": "SwimIdle",
+                      "className": "Animation",
+                      "guid": "12019"
+                    }
+                  ]
+                },
+                {
+                  "name": "toollunge",
+                  "className": "StringValue",
+                  "guid": "12366",
+                  "children": [
+                    {
+                      "name": "ToolLungeAnim",
+                      "className": "Animation",
+                      "guid": "12009"
+                    }
+                  ]
+                },
+                {
+                  "name": "toolnone",
+                  "className": "StringValue",
+                  "guid": "12364",
+                  "children": [
+                    {
+                      "name": "ToolNoneAnim",
+                      "className": "Animation",
+                      "guid": "12005"
+                    }
+                  ]
+                },
+                {
+                  "name": "toolslash",
+                  "className": "StringValue",
+                  "guid": "12361",
+                  "children": [
+                    {
+                      "name": "ToolSlashAnim",
+                      "className": "Animation",
+                      "guid": "11998"
+                    }
+                  ]
+                },
+                {
+                  "name": "walk",
+                  "className": "StringValue",
+                  "guid": "12371",
+                  "children": [
+                    {
+                      "name": "WalkAnim",
+                      "className": "Animation",
+                      "guid": "12014"
+                    }
+                  ]
+                },
+                {
                   "name": "wave",
                   "className": "StringValue",
-                  "guid": "12358",
+                  "guid": "12359",
                   "children": [
                     {
                       "name": "WaveAnim",
                       "className": "Animation",
-                      "guid": "11995"
+                      "guid": "11996"
                     }
                   ]
                 }
@@ -1714,115 +1822,37 @@
             {
               "name": "Body Colors",
               "className": "BodyColors",
-              "guid": "12116"
+              "guid": "12117"
             },
             {
               "name": "GlowRing",
               "className": "Model",
-              "guid": "12230",
+              "guid": "12231",
               "children": [
                 {
                   "name": "hitbox",
                   "className": "Part",
-                  "guid": "12285"
+                  "guid": "12286"
                 },
                 {
                   "name": "InnerFill",
                   "className": "Part",
-                  "guid": "12286"
+                  "guid": "12287"
                 },
                 {
                   "name": "OuterRing",
                   "className": "UnionOperation",
-                  "guid": "12448"
+                  "guid": "12449"
                 }
               ]
             },
             {
               "name": "Head",
               "className": "MeshPart",
-              "guid": "12184",
+              "guid": "12185",
               "children": [
                 {
                   "name": "FaceCenterAttachment",
-                  "className": "Attachment",
-                  "guid": "12069",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12488"
-                    }
-                  ]
-                },
-                {
-                  "name": "FaceControls",
-                  "className": "FaceControls",
-                  "guid": "12132"
-                },
-                {
-                  "name": "FaceFrontAttachment",
-                  "className": "Attachment",
-                  "guid": "12068",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12486"
-                    }
-                  ]
-                },
-                {
-                  "name": "HairAttachment",
-                  "className": "Attachment",
-                  "guid": "12071",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12490"
-                    }
-                  ]
-                },
-                {
-                  "name": "HatAttachment",
-                  "className": "Attachment",
-                  "guid": "12072",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12491"
-                    }
-                  ]
-                },
-                {
-                  "name": "Head",
-                  "className": "WrapTarget",
-                  "guid": "12528"
-                },
-                {
-                  "name": "HumanoidRootPartNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12254"
-                },
-                {
-                  "name": "LeftUpperArmNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12253"
-                },
-                {
-                  "name": "Neck",
-                  "className": "AnimationConstraint",
-                  "guid": "12030"
-                },
-                {
-                  "name": "NeckBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12107"
-                },
-                {
-                  "name": "NeckRigAttachment",
                   "className": "Attachment",
                   "guid": "12070",
                   "children": [
@@ -1834,67 +1864,140 @@
                   ]
                 },
                 {
+                  "name": "FaceControls",
+                  "className": "FaceControls",
+                  "guid": "12133"
+                },
+                {
+                  "name": "FaceFrontAttachment",
+                  "className": "Attachment",
+                  "guid": "12069",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12487"
+                    }
+                  ]
+                },
+                {
+                  "name": "HairAttachment",
+                  "className": "Attachment",
+                  "guid": "12072",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12491"
+                    }
+                  ]
+                },
+                {
+                  "name": "HatAttachment",
+                  "className": "Attachment",
+                  "guid": "12073",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12492"
+                    }
+                  ]
+                },
+                {
+                  "name": "Head",
+                  "className": "WrapTarget",
+                  "guid": "12529"
+                },
+                {
+                  "name": "HumanoidRootPartNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12255"
+                },
+                {
+                  "name": "LeftUpperArmNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12254"
+                },
+                {
+                  "name": "Neck",
+                  "className": "AnimationConstraint",
+                  "guid": "12031"
+                },
+                {
+                  "name": "NeckBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12108"
+                },
+                {
+                  "name": "NeckRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12071",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12490"
+                    }
+                  ]
+                },
+                {
                   "name": "OriginalSize",
                   "className": "Vector3Value",
-                  "guid": "12487"
+                  "guid": "12488"
                 },
                 {
                   "name": "RightUpperArmNoCollision",
                   "className": "NoCollisionConstraint",
-                  "guid": "12255"
+                  "guid": "12256"
                 }
               ]
             },
             {
               "name": "Humanoid",
               "className": "Humanoid",
-              "guid": "12166",
+              "guid": "12167",
               "children": [
                 {
                   "name": "Animator",
                   "className": "Animator",
-                  "guid": "12037"
+                  "guid": "12038"
                 },
                 {
                   "name": "BodyDepthScale",
                   "className": "NumberValue",
-                  "guid": "12267"
+                  "guid": "12268"
                 },
                 {
                   "name": "BodyHeightScale",
                   "className": "NumberValue",
-                  "guid": "12265"
+                  "guid": "12266"
                 },
                 {
                   "name": "BodyProportionScale",
                   "className": "NumberValue",
-                  "guid": "12263"
+                  "guid": "12264"
                 },
                 {
                   "name": "BodyTypeScale",
                   "className": "NumberValue",
-                  "guid": "12266"
+                  "guid": "12267"
                 },
                 {
                   "name": "BodyWidthScale",
                   "className": "NumberValue",
-                  "guid": "12264"
+                  "guid": "12265"
                 },
                 {
                   "name": "HeadScale",
                   "className": "NumberValue",
-                  "guid": "12262"
+                  "guid": "12263"
                 },
                 {
                   "name": "HumanoidDescription",
                   "className": "HumanoidDescription",
-                  "guid": "12167",
+                  "guid": "12168",
                   "children": [
-                    {
-                      "name": "BodyPartDescription",
-                      "className": "BodyPartDescription",
-                      "guid": "12117"
-                    },
                     {
                       "name": "BodyPartDescription",
                       "className": "BodyPartDescription",
@@ -1919,47 +2022,52 @@
                       "name": "BodyPartDescription",
                       "className": "BodyPartDescription",
                       "guid": "12122"
+                    },
+                    {
+                      "name": "BodyPartDescription",
+                      "className": "BodyPartDescription",
+                      "guid": "12123"
                     }
                   ]
                 },
                 {
                   "name": "Status",
                   "className": "Status",
-                  "guid": "12543"
+                  "guid": "12544"
                 }
               ]
             },
             {
               "name": "HumanoidRootPart",
               "className": "Part",
-              "guid": "12287",
+              "guid": "12288",
               "children": [
                 {
                   "name": "OriginalSize",
                   "className": "Vector3Value",
-                  "guid": "12513"
+                  "guid": "12514"
                 },
                 {
                   "name": "RootAttachment",
-                  "className": "Attachment",
-                  "guid": "12088",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12512"
-                    }
-                  ]
-                },
-                {
-                  "name": "RootRigAttachment",
                   "className": "Attachment",
                   "guid": "12089",
                   "children": [
                     {
                       "name": "OriginalPosition",
                       "className": "Vector3Value",
-                      "guid": "12514"
+                      "guid": "12513"
+                    }
+                  ]
+                },
+                {
+                  "name": "RootRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12090",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12515"
                     }
                   ]
                 }
@@ -1968,37 +2076,20 @@
             {
               "name": "LeftFoot",
               "className": "MeshPart",
-              "guid": "12177",
+              "guid": "12178",
               "children": [
                 {
                   "name": "LeftAnkle",
                   "className": "AnimationConstraint",
-                  "guid": "12023"
+                  "guid": "12024"
                 },
                 {
                   "name": "LeftAnkleBallSocket",
                   "className": "BallSocketConstraint",
-                  "guid": "12100"
+                  "guid": "12101"
                 },
                 {
                   "name": "LeftAnkleRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12041",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12452"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftFoot",
-                  "className": "WrapTarget",
-                  "guid": "12521"
-                },
-                {
-                  "name": "LeftFootAttachment",
                   "className": "Attachment",
                   "guid": "12042",
                   "children": [
@@ -2010,46 +2101,36 @@
                   ]
                 },
                 {
+                  "name": "LeftFoot",
+                  "className": "WrapTarget",
+                  "guid": "12522"
+                },
+                {
+                  "name": "LeftFootAttachment",
+                  "className": "Attachment",
+                  "guid": "12043",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12454"
+                    }
+                  ]
+                },
+                {
                   "name": "OriginalSize",
                   "className": "Vector3Value",
-                  "guid": "12454"
+                  "guid": "12455"
                 }
               ]
             },
             {
               "name": "LeftHand",
               "className": "MeshPart",
-              "guid": "12179",
+              "guid": "12180",
               "children": [
                 {
                   "name": "LeftGripAttachment",
-                  "className": "Attachment",
-                  "guid": "12045",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12459"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftHand",
-                  "className": "WrapTarget",
-                  "guid": "12523"
-                },
-                {
-                  "name": "LeftWrist",
-                  "className": "AnimationConstraint",
-                  "guid": "12025"
-                },
-                {
-                  "name": "LeftWristBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12102"
-                },
-                {
-                  "name": "LeftWristRigAttachment",
                   "className": "Attachment",
                   "guid": "12046",
                   "children": [
@@ -2061,828 +2142,22 @@
                   ]
                 },
                 {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12458"
-                }
-              ]
-            },
-            {
-              "name": "LeftLowerArm",
-              "className": "MeshPart",
-              "guid": "12190",
-              "children": [
-                {
-                  "name": "LeftElbow",
-                  "className": "AnimationConstraint",
-                  "guid": "12036"
-                },
-                {
-                  "name": "LeftElbowBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12112"
-                },
-                {
-                  "name": "LeftElbowRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12090",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12515"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftLowerArm",
+                  "name": "LeftHand",
                   "className": "WrapTarget",
-                  "guid": "12534"
+                  "guid": "12524"
+                },
+                {
+                  "name": "LeftWrist",
+                  "className": "AnimationConstraint",
+                  "guid": "12026"
+                },
+                {
+                  "name": "LeftWristBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12103"
                 },
                 {
                   "name": "LeftWristRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12091",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12516"
-                    }
-                  ]
-                },
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12517"
-                }
-              ]
-            },
-            {
-              "name": "LeftLowerLeg",
-              "className": "MeshPart",
-              "guid": "12181",
-              "children": [
-                {
-                  "name": "LeftAnkleRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12058",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12474"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftKnee",
-                  "className": "AnimationConstraint",
-                  "guid": "12027"
-                },
-                {
-                  "name": "LeftKneeBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12104"
-                },
-                {
-                  "name": "LeftKneeRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12059",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12475"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftLowerLeg",
-                  "className": "WrapTarget",
-                  "guid": "12525"
-                },
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12473"
-                }
-              ]
-            },
-            {
-              "name": "LeftUpperArm",
-              "className": "MeshPart",
-              "guid": "12182",
-              "children": [
-                {
-                  "name": "LeftElbowRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12063",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12480"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftHandNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12251"
-                },
-                {
-                  "name": "LeftShoulder",
-                  "className": "AnimationConstraint",
-                  "guid": "12028"
-                },
-                {
-                  "name": "LeftShoulderAttachment",
-                  "className": "Attachment",
-                  "guid": "12060",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12477"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftShoulderBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12105"
-                },
-                {
-                  "name": "LeftShoulderRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12061",
-                  "children": [
-                    {
-                      "name": "JointRotation",
-                      "className": "Attachment",
-                      "guid": "12062",
-                      "children": [
-                        {
-                          "name": "OriginalPosition",
-                          "className": "Vector3Value",
-                          "guid": "12478"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12479"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftUpperArm",
-                  "className": "WrapTarget",
-                  "guid": "12526"
-                },
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12476"
-                }
-              ]
-            },
-            {
-              "name": "LeftUpperLeg",
-              "className": "MeshPart",
-              "guid": "12186",
-              "children": [
-                {
-                  "name": "LeftFootNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12261"
-                },
-                {
-                  "name": "LeftHip",
-                  "className": "AnimationConstraint",
-                  "guid": "12032"
-                },
-                {
-                  "name": "LeftHipBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12108"
-                },
-                {
-                  "name": "LeftHipRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12081",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12502"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftKneeRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12080",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12501"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftUpperLeg",
-                  "className": "WrapTarget",
-                  "guid": "12530"
-                },
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12500"
-                },
-                {
-                  "name": "RightUpperLegNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12260"
-                }
-              ]
-            },
-            {
-              "name": "LowerTorso",
-              "className": "MeshPart",
-              "guid": "12185",
-              "children": [
-                {
-                  "name": "LeftHipRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12075",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12495"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftLowerLegNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12257"
-                },
-                {
-                  "name": "LeftUpperArmNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12259"
-                },
-                {
-                  "name": "LowerTorso",
-                  "className": "WrapTarget",
-                  "guid": "12529"
-                },
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12493"
-                },
-                {
-                  "name": "RightHipRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12079",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12499"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightLowerLegNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12258"
-                },
-                {
-                  "name": "RightUpperArmNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12256"
-                },
-                {
-                  "name": "Root",
-                  "className": "AnimationConstraint",
-                  "guid": "12031"
-                },
-                {
-                  "name": "RootRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12074",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12494"
-                    }
-                  ]
-                },
-                {
-                  "name": "WaistBackAttachment",
-                  "className": "Attachment",
-                  "guid": "12076",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12496"
-                    }
-                  ]
-                },
-                {
-                  "name": "WaistCenterAttachment",
-                  "className": "Attachment",
-                  "guid": "12073",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12492"
-                    }
-                  ]
-                },
-                {
-                  "name": "WaistFrontAttachment",
-                  "className": "Attachment",
-                  "guid": "12077",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12497"
-                    }
-                  ]
-                },
-                {
-                  "name": "WaistRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12078",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12498"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "RightFoot",
-              "className": "MeshPart",
-              "guid": "12189",
-              "children": [
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12510"
-                },
-                {
-                  "name": "RightAnkle",
-                  "className": "AnimationConstraint",
-                  "guid": "12035"
-                },
-                {
-                  "name": "RightAnkleBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12111"
-                },
-                {
-                  "name": "RightAnkleRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12086",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12509"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightFoot",
-                  "className": "WrapTarget",
-                  "guid": "12533"
-                },
-                {
-                  "name": "RightFootAttachment",
-                  "className": "Attachment",
-                  "guid": "12087",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12511"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "RightHand",
-              "className": "MeshPart",
-              "guid": "12176",
-              "children": [
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12450"
-                },
-                {
-                  "name": "RightGripAttachment",
-                  "className": "Attachment",
-                  "guid": "12040",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12451"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightHand",
-                  "className": "WrapTarget",
-                  "guid": "12520"
-                },
-                {
-                  "name": "RightWrist",
-                  "className": "AnimationConstraint",
-                  "guid": "12022"
-                },
-                {
-                  "name": "RightWristBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12099"
-                },
-                {
-                  "name": "RightWristRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12039",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12449"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "RightLowerArm",
-              "className": "MeshPart",
-              "guid": "12188",
-              "children": [
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12507"
-                },
-                {
-                  "name": "RightElbow",
-                  "className": "AnimationConstraint",
-                  "guid": "12034"
-                },
-                {
-                  "name": "RightElbowBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12110"
-                },
-                {
-                  "name": "RightElbowRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12084",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12506"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightLowerArm",
-                  "className": "WrapTarget",
-                  "guid": "12532"
-                },
-                {
-                  "name": "RightWristRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12085",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12508"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "RightLowerLeg",
-              "className": "MeshPart",
-              "guid": "12187",
-              "children": [
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12505"
-                },
-                {
-                  "name": "RightAnkleRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12083",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12504"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightKnee",
-                  "className": "AnimationConstraint",
-                  "guid": "12033"
-                },
-                {
-                  "name": "RightKneeBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12109"
-                },
-                {
-                  "name": "RightKneeRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12082",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12503"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightLowerLeg",
-                  "className": "WrapTarget",
-                  "guid": "12531"
-                }
-              ]
-            },
-            {
-              "name": "RightUpperArm",
-              "className": "MeshPart",
-              "guid": "12183",
-              "children": [
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12485"
-                },
-                {
-                  "name": "RightElbowRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12067",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12484"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightHandNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12252"
-                },
-                {
-                  "name": "RightShoulder",
-                  "className": "AnimationConstraint",
-                  "guid": "12029"
-                },
-                {
-                  "name": "RightShoulderAttachment",
-                  "className": "Attachment",
-                  "guid": "12066",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12483"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightShoulderBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12106"
-                },
-                {
-                  "name": "RightShoulderRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12064",
-                  "children": [
-                    {
-                      "name": "JointRotation",
-                      "className": "Attachment",
-                      "guid": "12065",
-                      "children": [
-                        {
-                          "name": "OriginalPosition",
-                          "className": "Vector3Value",
-                          "guid": "12482"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12481"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightUpperArm",
-                  "className": "WrapTarget",
-                  "guid": "12527"
-                }
-              ]
-            },
-            {
-              "name": "RightUpperLeg",
-              "className": "MeshPart",
-              "guid": "12178",
-              "children": [
-                {
-                  "name": "OriginalSize",
-                  "className": "Vector3Value",
-                  "guid": "12456"
-                },
-                {
-                  "name": "RightFootNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12243"
-                },
-                {
-                  "name": "RightHip",
-                  "className": "AnimationConstraint",
-                  "guid": "12024"
-                },
-                {
-                  "name": "RightHipBallSocket",
-                  "className": "BallSocketConstraint",
-                  "guid": "12101"
-                },
-                {
-                  "name": "RightHipRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12043",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12455"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightKneeRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12044",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12457"
-                    }
-                  ]
-                },
-                {
-                  "name": "RightUpperLeg",
-                  "className": "WrapTarget",
-                  "guid": "12522"
-                }
-              ]
-            },
-            {
-              "name": "ShopProximityScript",
-              "className": "Script",
-              "guid": "12329",
-              "filePaths": [
-                "sync/Workspace/npc shop/ShopProximityScript.server.luau"
-              ]
-            },
-            {
-              "name": "UpperTorso",
-              "className": "MeshPart",
-              "guid": "12180",
-              "children": [
-                {
-                  "name": "BodyBackAttachment",
-                  "className": "Attachment",
-                  "guid": "12057",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12472"
-                    }
-                  ]
-                },
-                {
-                  "name": "BodyFrontAttachment",
-                  "className": "Attachment",
-                  "guid": "12048",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12462"
-                    }
-                  ]
-                },
-                {
-                  "name": "HumanoidRootPartNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12245"
-                },
-                {
-                  "name": "LeftCollarAttachment",
-                  "className": "Attachment",
-                  "guid": "12054",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12468"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftLowerArmNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12250"
-                },
-                {
-                  "name": "LeftLowerLegNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12248"
-                },
-                {
-                  "name": "LeftShoulderRigAttachment",
-                  "className": "Attachment",
-                  "guid": "12055",
-                  "children": [
-                    {
-                      "name": "JointRotation",
-                      "className": "Attachment",
-                      "guid": "12056",
-                      "children": [
-                        {
-                          "name": "OriginalPosition",
-                          "className": "Vector3Value",
-                          "guid": "12469"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12470"
-                    }
-                  ]
-                },
-                {
-                  "name": "LeftUpperLegNoCollision",
-                  "className": "NoCollisionConstraint",
-                  "guid": "12247"
-                },
-                {
-                  "name": "NeckAttachment",
-                  "className": "Attachment",
-                  "guid": "12053",
-                  "children": [
-                    {
-                      "name": "OriginalPosition",
-                      "className": "Vector3Value",
-                      "guid": "12467"
-                    }
-                  ]
-                },
-                {
-                  "name": "NeckRigAttachment",
                   "className": "Attachment",
                   "guid": "12047",
                   "children": [
@@ -2896,10 +2171,746 @@
                 {
                   "name": "OriginalSize",
                   "className": "Vector3Value",
-                  "guid": "12471"
+                  "guid": "12459"
+                }
+              ]
+            },
+            {
+              "name": "LeftLowerArm",
+              "className": "MeshPart",
+              "guid": "12191",
+              "children": [
+                {
+                  "name": "LeftElbow",
+                  "className": "AnimationConstraint",
+                  "guid": "12037"
                 },
                 {
-                  "name": "RightCollarAttachment",
+                  "name": "LeftElbowBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12113"
+                },
+                {
+                  "name": "LeftElbowRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12091",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12516"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftLowerArm",
+                  "className": "WrapTarget",
+                  "guid": "12535"
+                },
+                {
+                  "name": "LeftWristRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12092",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12517"
+                    }
+                  ]
+                },
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12518"
+                }
+              ]
+            },
+            {
+              "name": "LeftLowerLeg",
+              "className": "MeshPart",
+              "guid": "12182",
+              "children": [
+                {
+                  "name": "LeftAnkleRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12059",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12475"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftKnee",
+                  "className": "AnimationConstraint",
+                  "guid": "12028"
+                },
+                {
+                  "name": "LeftKneeBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12105"
+                },
+                {
+                  "name": "LeftKneeRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12060",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12476"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftLowerLeg",
+                  "className": "WrapTarget",
+                  "guid": "12526"
+                },
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12474"
+                }
+              ]
+            },
+            {
+              "name": "LeftUpperArm",
+              "className": "MeshPart",
+              "guid": "12183",
+              "children": [
+                {
+                  "name": "LeftElbowRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12064",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12481"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftHandNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12252"
+                },
+                {
+                  "name": "LeftShoulder",
+                  "className": "AnimationConstraint",
+                  "guid": "12029"
+                },
+                {
+                  "name": "LeftShoulderAttachment",
+                  "className": "Attachment",
+                  "guid": "12061",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12478"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftShoulderBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12106"
+                },
+                {
+                  "name": "LeftShoulderRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12062",
+                  "children": [
+                    {
+                      "name": "JointRotation",
+                      "className": "Attachment",
+                      "guid": "12063",
+                      "children": [
+                        {
+                          "name": "OriginalPosition",
+                          "className": "Vector3Value",
+                          "guid": "12479"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12480"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftUpperArm",
+                  "className": "WrapTarget",
+                  "guid": "12527"
+                },
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12477"
+                }
+              ]
+            },
+            {
+              "name": "LeftUpperLeg",
+              "className": "MeshPart",
+              "guid": "12187",
+              "children": [
+                {
+                  "name": "LeftFootNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12262"
+                },
+                {
+                  "name": "LeftHip",
+                  "className": "AnimationConstraint",
+                  "guid": "12033"
+                },
+                {
+                  "name": "LeftHipBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12109"
+                },
+                {
+                  "name": "LeftHipRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12082",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12503"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftKneeRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12081",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12502"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftUpperLeg",
+                  "className": "WrapTarget",
+                  "guid": "12531"
+                },
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12501"
+                },
+                {
+                  "name": "RightUpperLegNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12261"
+                }
+              ]
+            },
+            {
+              "name": "LowerTorso",
+              "className": "MeshPart",
+              "guid": "12186",
+              "children": [
+                {
+                  "name": "LeftHipRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12076",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12496"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftLowerLegNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12258"
+                },
+                {
+                  "name": "LeftUpperArmNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12260"
+                },
+                {
+                  "name": "LowerTorso",
+                  "className": "WrapTarget",
+                  "guid": "12530"
+                },
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12494"
+                },
+                {
+                  "name": "RightHipRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12080",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12500"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightLowerLegNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12259"
+                },
+                {
+                  "name": "RightUpperArmNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12257"
+                },
+                {
+                  "name": "Root",
+                  "className": "AnimationConstraint",
+                  "guid": "12032"
+                },
+                {
+                  "name": "RootRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12075",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12495"
+                    }
+                  ]
+                },
+                {
+                  "name": "WaistBackAttachment",
+                  "className": "Attachment",
+                  "guid": "12077",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12497"
+                    }
+                  ]
+                },
+                {
+                  "name": "WaistCenterAttachment",
+                  "className": "Attachment",
+                  "guid": "12074",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12493"
+                    }
+                  ]
+                },
+                {
+                  "name": "WaistFrontAttachment",
+                  "className": "Attachment",
+                  "guid": "12078",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12498"
+                    }
+                  ]
+                },
+                {
+                  "name": "WaistRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12079",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12499"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightFoot",
+              "className": "MeshPart",
+              "guid": "12190",
+              "children": [
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12511"
+                },
+                {
+                  "name": "RightAnkle",
+                  "className": "AnimationConstraint",
+                  "guid": "12036"
+                },
+                {
+                  "name": "RightAnkleBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12112"
+                },
+                {
+                  "name": "RightAnkleRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12087",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12510"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightFoot",
+                  "className": "WrapTarget",
+                  "guid": "12534"
+                },
+                {
+                  "name": "RightFootAttachment",
+                  "className": "Attachment",
+                  "guid": "12088",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12512"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightHand",
+              "className": "MeshPart",
+              "guid": "12177",
+              "children": [
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12451"
+                },
+                {
+                  "name": "RightGripAttachment",
+                  "className": "Attachment",
+                  "guid": "12041",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12452"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightHand",
+                  "className": "WrapTarget",
+                  "guid": "12521"
+                },
+                {
+                  "name": "RightWrist",
+                  "className": "AnimationConstraint",
+                  "guid": "12023"
+                },
+                {
+                  "name": "RightWristBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12100"
+                },
+                {
+                  "name": "RightWristRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12040",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12450"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightLowerArm",
+              "className": "MeshPart",
+              "guid": "12189",
+              "children": [
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12508"
+                },
+                {
+                  "name": "RightElbow",
+                  "className": "AnimationConstraint",
+                  "guid": "12035"
+                },
+                {
+                  "name": "RightElbowBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12111"
+                },
+                {
+                  "name": "RightElbowRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12085",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12507"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightLowerArm",
+                  "className": "WrapTarget",
+                  "guid": "12533"
+                },
+                {
+                  "name": "RightWristRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12086",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12509"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RightLowerLeg",
+              "className": "MeshPart",
+              "guid": "12188",
+              "children": [
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12506"
+                },
+                {
+                  "name": "RightAnkleRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12084",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12505"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightKnee",
+                  "className": "AnimationConstraint",
+                  "guid": "12034"
+                },
+                {
+                  "name": "RightKneeBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12110"
+                },
+                {
+                  "name": "RightKneeRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12083",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12504"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightLowerLeg",
+                  "className": "WrapTarget",
+                  "guid": "12532"
+                }
+              ]
+            },
+            {
+              "name": "RightUpperArm",
+              "className": "MeshPart",
+              "guid": "12184",
+              "children": [
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12486"
+                },
+                {
+                  "name": "RightElbowRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12068",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12485"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightHandNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12253"
+                },
+                {
+                  "name": "RightShoulder",
+                  "className": "AnimationConstraint",
+                  "guid": "12030"
+                },
+                {
+                  "name": "RightShoulderAttachment",
+                  "className": "Attachment",
+                  "guid": "12067",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12484"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightShoulderBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12107"
+                },
+                {
+                  "name": "RightShoulderRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12065",
+                  "children": [
+                    {
+                      "name": "JointRotation",
+                      "className": "Attachment",
+                      "guid": "12066",
+                      "children": [
+                        {
+                          "name": "OriginalPosition",
+                          "className": "Vector3Value",
+                          "guid": "12483"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12482"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightUpperArm",
+                  "className": "WrapTarget",
+                  "guid": "12528"
+                }
+              ]
+            },
+            {
+              "name": "RightUpperLeg",
+              "className": "MeshPart",
+              "guid": "12179",
+              "children": [
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12457"
+                },
+                {
+                  "name": "RightFootNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12244"
+                },
+                {
+                  "name": "RightHip",
+                  "className": "AnimationConstraint",
+                  "guid": "12025"
+                },
+                {
+                  "name": "RightHipBallSocket",
+                  "className": "BallSocketConstraint",
+                  "guid": "12102"
+                },
+                {
+                  "name": "RightHipRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12044",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12456"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightKneeRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12045",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12458"
+                    }
+                  ]
+                },
+                {
+                  "name": "RightUpperLeg",
+                  "className": "WrapTarget",
+                  "guid": "12523"
+                }
+              ]
+            },
+            {
+              "name": "ShopProximityScript",
+              "className": "Script",
+              "guid": "12330",
+              "filePaths": [
+                "sync/Workspace/npc shop/ShopProximityScript.server.luau"
+              ]
+            },
+            {
+              "name": "UpperTorso",
+              "className": "MeshPart",
+              "guid": "12181",
+              "children": [
+                {
+                  "name": "BodyBackAttachment",
+                  "className": "Attachment",
+                  "guid": "12058",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12473"
+                    }
+                  ]
+                },
+                {
+                  "name": "BodyFrontAttachment",
                   "className": "Attachment",
                   "guid": "12049",
                   "children": [
@@ -2911,32 +2922,95 @@
                   ]
                 },
                 {
-                  "name": "RightLowerArmNoCollision",
+                  "name": "HumanoidRootPartNoCollision",
                   "className": "NoCollisionConstraint",
-                  "guid": "12244"
+                  "guid": "12246"
                 },
                 {
-                  "name": "RightLowerLegNoCollision",
+                  "name": "LeftCollarAttachment",
+                  "className": "Attachment",
+                  "guid": "12055",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12469"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftLowerArmNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12251"
+                },
+                {
+                  "name": "LeftLowerLegNoCollision",
                   "className": "NoCollisionConstraint",
                   "guid": "12249"
                 },
                 {
-                  "name": "RightShoulderRigAttachment",
+                  "name": "LeftShoulderRigAttachment",
                   "className": "Attachment",
-                  "guid": "12050",
+                  "guid": "12056",
                   "children": [
                     {
                       "name": "JointRotation",
                       "className": "Attachment",
-                      "guid": "12051",
+                      "guid": "12057",
                       "children": [
                         {
                           "name": "OriginalPosition",
                           "className": "Vector3Value",
-                          "guid": "12465"
+                          "guid": "12470"
                         }
                       ]
                     },
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12471"
+                    }
+                  ]
+                },
+                {
+                  "name": "LeftUpperLegNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12248"
+                },
+                {
+                  "name": "NeckAttachment",
+                  "className": "Attachment",
+                  "guid": "12054",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12468"
+                    }
+                  ]
+                },
+                {
+                  "name": "NeckRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12048",
+                  "children": [
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12462"
+                    }
+                  ]
+                },
+                {
+                  "name": "OriginalSize",
+                  "className": "Vector3Value",
+                  "guid": "12472"
+                },
+                {
+                  "name": "RightCollarAttachment",
+                  "className": "Attachment",
+                  "guid": "12050",
+                  "children": [
                     {
                       "name": "OriginalPosition",
                       "className": "Vector3Value",
@@ -2945,34 +3019,68 @@
                   ]
                 },
                 {
+                  "name": "RightLowerArmNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12245"
+                },
+                {
+                  "name": "RightLowerLegNoCollision",
+                  "className": "NoCollisionConstraint",
+                  "guid": "12250"
+                },
+                {
+                  "name": "RightShoulderRigAttachment",
+                  "className": "Attachment",
+                  "guid": "12051",
+                  "children": [
+                    {
+                      "name": "JointRotation",
+                      "className": "Attachment",
+                      "guid": "12052",
+                      "children": [
+                        {
+                          "name": "OriginalPosition",
+                          "className": "Vector3Value",
+                          "guid": "12466"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "OriginalPosition",
+                      "className": "Vector3Value",
+                      "guid": "12465"
+                    }
+                  ]
+                },
+                {
                   "name": "RightUpperLegNoCollision",
                   "className": "NoCollisionConstraint",
-                  "guid": "12246"
+                  "guid": "12247"
                 },
                 {
                   "name": "UpperTorso",
                   "className": "WrapTarget",
-                  "guid": "12524"
+                  "guid": "12525"
                 },
                 {
                   "name": "Waist",
                   "className": "AnimationConstraint",
-                  "guid": "12026"
+                  "guid": "12027"
                 },
                 {
                   "name": "WaistBallSocket",
                   "className": "BallSocketConstraint",
-                  "guid": "12103"
+                  "guid": "12104"
                 },
                 {
                   "name": "WaistRigAttachment",
                   "className": "Attachment",
-                  "guid": "12052",
+                  "guid": "12053",
                   "children": [
                     {
                       "name": "OriginalPosition",
                       "className": "Vector3Value",
-                      "guid": "12466"
+                      "guid": "12467"
                     }
                   ]
                 }
@@ -2983,22 +3091,64 @@
         {
           "name": "ScenesClient",
           "className": "Folder",
-          "guid": "12134"
+          "guid": "12135"
         },
         {
           "name": "ScenesServer",
           "className": "Folder",
-          "guid": "12135"
+          "guid": "12136"
         },
         {
           "name": "temp",
           "className": "Folder",
-          "guid": "12133"
+          "guid": "12134"
         },
         {
           "name": "Terrain",
           "className": "Terrain",
-          "guid": "12388"
+          "guid": "12389"
+        },
+        {
+          "name": "Model",
+          "className": "Folder",
+          "children": [
+            {
+              "name": "Part",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "Decal",
+                  "className": "Decal",
+                  "guid": "550663"
+                }
+              ]
+            },
+            {
+              "name": "Part",
+              "className": "Part",
+              "guid": "550665"
+            }
+          ]
+        },
+        {
+          "name": "Part",
+          "className": "Part",
+          "guid": "991981"
+        },
+        {
+          "name": "Part",
+          "className": "Part",
+          "guid": "993688"
+        },
+        {
+          "name": "Part",
+          "className": "Part",
+          "guid": "997042"
+        },
+        {
+          "name": "Part",
+          "className": "Part",
+          "guid": "998727"
         }
       ]
     }
