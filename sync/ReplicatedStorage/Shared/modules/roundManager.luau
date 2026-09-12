@@ -9,6 +9,7 @@ local roundEndEvent = re.roundEnd
 local charmanager = require(rs.Shared.modules.CharacterManager)
 local spawnpoint = game.Workspace:FindFirstChild("RoundSpawn")
 local maploader = require(rs.Shared.modules.MapLoader)
+roundmanager.KillerId = nil
 --0 = lobby, 1 = ingame, 2 = survivor can open door
 local function setPlayerUp(player, killer)
 	charmanager.roundStart(player, killer)
@@ -17,7 +18,7 @@ end
 function roundmanager.startRound()
 	roundmanager.Status = 1
 	RoundstartEvent:FireAllClients(roundmanager.Status)
-	local killer = charmanager.GetKillerNumber()
+	roundmanager.KillerId = charmanager.GetKillerNumber()
 	local map = math.random(1, #maps)
 	map = maps[map]
 	print(map)
@@ -31,7 +32,7 @@ function roundmanager.startRound()
 		if spawnpoint then
 			v.Character:WaitForChild("HumanoidRootPart").CFrame = spawnpoint.CFrame + Vector3.new(0, 3, 0)
 		end
-		setPlayerUp(v, killer)
+		setPlayerUp(v, roundmanager.KillerId)
 	end
 	return map
 end
