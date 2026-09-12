@@ -7,7 +7,7 @@ local roundmanager = require(modules.roundManager)
 function PostManager.PostRequestCheck(player)
 	local KillerId = roundmanager.KillerId
 	local UserId = player.UserId
-	if KillerId == UserId then
+	if roundmanager.Status ~= 0 and KillerId == UserId then
 		return true
 	else
 		return false

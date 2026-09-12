@@ -32,7 +32,11 @@ postreqest.OnServerEvent:Connect(function(player, effect)
 	local check = postmanager.PostRequestCheck(player)
 	print(check)
 	if check == true then
-		postprocessing:FireAllClients(effect)
+		for _, recipient in ipairs(game.Players:GetPlayers()) do
+			if recipient ~= player then
+				postprocessing:FireClient(recipient, effect)
+			end
+		end
 	end
 end)
 

@@ -8,5 +8,5 @@ dark.MouseButton1Click:Connect(function()
 end)
 
 bright.MouseButton1Click:Connect(function()
-	
+	postrequest:FireServer("bright")
 end)

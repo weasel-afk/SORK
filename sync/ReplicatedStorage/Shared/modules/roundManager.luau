@@ -39,6 +39,7 @@ end
 
 function roundmanager.stopRound(mapName)
 	roundmanager.Status = 0
+	roundmanager.KillerId = nil
 	roundEndEvent:FireAllClients(roundmanager.Status)
 	for i, v in pairs(game.Players:GetChildren()) do
 		v.Team = game.Teams["lobby"]
