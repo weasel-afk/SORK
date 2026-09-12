@@ -101,7 +101,7 @@ local animNames = {
 
 -- Existance in this list signifies that it is an emote, the value indicates if it is a looping emote
 local emoteNames =
-	{ wave = false, point = false, dance = true, dance2 = true, dance3 = true, laugh = false, cheer = false }
+	{ wave = true, point = false, dance = true, dance2 = true, dance3 = true, laugh = false, cheer = false }
 
 -- Variables used in tracking if the character is using a ControllerManager.
 -- This implementation assumes the common case of the ControllerManager being a
@@ -1006,6 +1006,8 @@ script:WaitForChild("PlayEmote").OnInvoke = function(emote)
 	-- Return false to indicate that the emote could not be played
 	return false
 end
+
+
 
 if Character.Parent ~= nil then
 	-- initialize to idle
