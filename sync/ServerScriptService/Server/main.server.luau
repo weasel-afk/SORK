@@ -14,8 +14,11 @@ end)
 task.wait(3) -- just because ui shows like 3 seconds early, maybe bc of initialization?
 local TimeToStart = os.time() + 10
 local modulesRS = game.ReplicatedStorage.Shared.modules
+local postmanager = require(modulesRS.PostManager)
 local charactermanager = require(modulesRS.CharacterManager)
 local re = game.ReplicatedStorage.RE
+local postreqest = re.PostRequest
+local postprocessing = re.PostProcessing
 local timeupdate = re.timeupdate
 local maploader = require(modulesRS.MapLoader)
 local roundManager = require(modulesRS.roundManager)
@@ -23,6 +26,21 @@ re.CharSelect.OnServerEvent:Connect(function(player, s1or1k, char)
 	charactermanager.ChangeChar(s1or1k, char, player)
 end)
 local map = nil
+
+postreqest.OnServerEvent:Connect(function(player, effect)
+	print(effect)
+	local check = postmanager.PostRequestCheck(player)
+	print(check)
+	if check == true then
+		local players = game.Players:GetPlayers()
+		for _, recipient in ipairs(players) do
+			-- DEBUG: include caster if solo (remove the `#players <= 1 or` part when done testing)
+			if recipient ~= player or #players <= 1 then
+				postprocessing:FireClient(recipient, effect)
+			end
+		end
+	end
+end)
 
 while true do -- just like brod cast uh time till start / end yk
 	timeupdate:FireAllClients(TimeToStart)

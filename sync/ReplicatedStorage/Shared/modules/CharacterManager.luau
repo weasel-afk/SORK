@@ -62,9 +62,12 @@ function characterManager.GetKillerNumber()
 	end
 
 	if #killerUserIds == 0 then
+		warn("[GetKillerNumber] No killer found in playerKillTable")
 		return nil
 	end
-	return killerUserIds[math.random(1, #killerUserIds)]
+	local killerId = killerUserIds[math.random(1, #killerUserIds)]
+	warn("[GetKillerNumber] Found " .. #killerUserIds .. " killer(s), selected UserId = " .. tostring(killerId))
+	return killerId
 end
 
 local function tool(selection, player)
