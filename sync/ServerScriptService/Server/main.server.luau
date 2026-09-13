@@ -32,8 +32,10 @@ postreqest.OnServerEvent:Connect(function(player, effect)
 	local check = postmanager.PostRequestCheck(player)
 	print(check)
 	if check == true then
-		for _, recipient in ipairs(game.Players:GetPlayers()) do
-			if recipient ~= player then
+		local players = game.Players:GetPlayers()
+		for _, recipient in ipairs(players) do
+			-- DEBUG: include caster if solo (remove the `#players <= 1 or` part when done testing)
+			if recipient ~= player or #players <= 1 then
 				postprocessing:FireClient(recipient, effect)
 			end
 		end

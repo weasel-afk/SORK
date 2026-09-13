@@ -5,11 +5,20 @@ local PostProcessingCall = RE:WaitForChild("PostProcessing")
 local RoundEndCall = RE:WaitForChild("roundEnd")
 local previousClockTime = nil
 
-local function restoreClockTime()
+-- Create the ColorCorrectionEffect once, keep a reference
+local colorCorrection = Lighting:FindFirstChild("ColorCorrectionEffect")
+if not colorCorrection then
+	colorCorrection = Instance.new("ColorCorrectionEffect")
+	colorCorrection.Name = "ColorCorrectionEffect"
+	colorCorrection.Parent = Lighting
+end
+
+local function resetEffects()
 	if previousClockTime ~= nil then
 		Lighting.ClockTime = previousClockTime
 		previousClockTime = nil
 	end
+	colorCorrection.Saturation = 0
 end
 
 PostProcessingCall.OnClientEvent:Connect(function(Effect)
@@ -21,8 +30,15 @@ PostProcessingCall.OnClientEvent:Connect(function(Effect)
 		end
 		Lighting.ClockTime = 0
 	elseif Effect == "bright" then
-		restoreClockTime()
+		warn("bright")
+		resetEffects()
+	elseif Effect == "desaturate" then
+		warn("desaturate")
+		colorCorrection.Saturation = 0.5
+	elseif Effect == "oversaturate" then
+		warn("oversaturate")
+		colorCorrection.Saturation = 1.5
 	end
 end)
 
-RoundEndCall.OnClientEvent:Connect(restoreClockTime)
+RoundEndCall.OnClientEvent:Connect(resetEffects)
