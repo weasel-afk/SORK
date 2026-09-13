@@ -1786,11 +1786,6 @@
               "guid": "555563",
               "children": [
                 {
-                  "name": "bright",
-                  "className": "TextButton",
-                  "guid": "556392"
-                },
-                {
                   "name": "dark",
                   "className": "TextButton",
                   "guid": "556186"
@@ -1811,6 +1806,30 @@
           "name": "ScreenGui",
           "className": "ScreenGui",
           "guid": "557445"
+        },
+        {
+          "name": "PostGui",
+          "className": "ScreenGui",
+          "guid": "12545",
+          "children": [
+            {
+              "name": "Frame",
+              "className": "Frame",
+              "guid": "12254",
+              "children": [
+                {
+                  "name": "desaturate",
+                  "className": "TextButton",
+                  "guid": "556101"
+                },
+                {
+                  "name": "desaturate",
+                  "className": "TextButton",
+                  "guid": "556431"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
