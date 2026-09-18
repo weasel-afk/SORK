@@ -6,9 +6,11 @@ local maps = ss.Maps:GetChildren()
 local re = rs.RE
 local RoundstartEvent = re.roundStart
 local roundEndEvent = re.roundEnd
+local killerIdEvent = re:WaitForChild("KillerId")
 local charmanager = require(rs.Shared.modules.CharacterManager)
 local spawnpoint = game.Workspace:FindFirstChild("RoundSpawn")
 local maploader = require(rs.Shared.modules.MapLoader)
+roundmanager.KillerId = nil
 --0 = lobby, 1 = ingame, 2 = survivor can open door
 local function setPlayerUp(player, killer)
 	charmanager.roundStart(player, killer)
@@ -17,13 +19,16 @@ end
 function roundmanager.startRound()
 	roundmanager.Status = 1
 	RoundstartEvent:FireAllClients(roundmanager.Status)
-	local killer = charmanager.GetKillerNumber()
+	roundmanager.KillerId = charmanager.GetKillerNumber()
+	warn("[roundManager] startRound: KillerId = " .. tostring(roundmanager.KillerId))
 	local map = math.random(1, #maps)
 	map = maps[map]
 	print(map)
 	map = map.Name
 	print(map)
 	local spawnpoint = maploader.loadMap(map)
+	warn("[roundManager] Firing KillerId event with: " .. tostring(roundmanager.KillerId))
+	killerIdEvent:FireAllClients(roundmanager.KillerId)
 	for i, v in pairs(game.Players:GetChildren()) do
 		v.Team = game.Teams["ingame"]
 		v:LoadCharacter()
@@ -31,14 +36,16 @@ function roundmanager.startRound()
 		if spawnpoint then
 			v.Character:WaitForChild("HumanoidRootPart").CFrame = spawnpoint.CFrame + Vector3.new(0, 3, 0)
 		end
-		setPlayerUp(v, killer)
+		setPlayerUp(v, roundmanager.KillerId)
 	end
 	return map
 end
 
 function roundmanager.stopRound(mapName)
 	roundmanager.Status = 0
+	roundmanager.KillerId = nil
 	roundEndEvent:FireAllClients(roundmanager.Status)
+	killerIdEvent:FireAllClients(nil)
 	for i, v in pairs(game.Players:GetChildren()) do
 		v.Team = game.Teams["lobby"]
 		v:LoadCharacter()
